@@ -1,0 +1,179 @@
+/* screen - cadastrar-perito*/
+
+.wireframe-u45-2 {
+  align-items: flex-start;
+  background-color: var(--bon-jour);
+  border: 1px none;
+  display: flex;
+  flex-direction: column;
+  height: 1024px;
+  padding: 64px 38.7px;
+  width: 1440px;
+}
+
+.wireframe-u45-2 .flex-row {
+  align-items: flex-start;
+  align-self: flex-end;
+  display: flex;
+  gap: 218px;
+  height: 90px;
+  min-width: 837px;
+}
+
+.wireframe-u45-2 .preencha-com-os-dados-do-perito {
+  align-self: flex-end;
+  color: var(--black);
+  font-family: var(--font-family-glory);
+  font-size: 34px;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: normal;
+  min-height: 76px;
+  min-width: 311px;
+  text-align: center;
+}
+
+.wireframe-u45-2 .frame-7 {
+  align-items: center;
+  box-shadow: 0px 3.65px 2.74px #0000004c;
+  display: flex;
+  gap: 14px;
+  min-width: 308px;
+}
+
+.wireframe-u45-2 .seu-trabalho-mais-organizado {
+  color: var(--congress-blue);
+  font-family: var(--font-family-glory);
+  font-size: 27.4px;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: normal;
+  margin-bottom: 1.82px;
+  min-height: 62px;
+  min-width: 200px;
+  text-align: right;
+}
+
+.wireframe-u45-2 .frame-1 {
+  align-items: flex-start;
+  background-color: var(--congress-blue);
+  border-radius: 47.3px/40.13px;
+  box-shadow: 0px 3.65px 3.65px #00000040;
+  display: flex;
+  height: 80px;
+  justify-content: flex-end;
+  min-width: 95px;
+  padding: 14.4px 33.7px;
+}
+
+.wireframe-u45-2 .e {
+  color: var(--white);
+  font-family: var(--font-family-belgrano);
+  font-size: 39.1px;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: normal;
+  min-height: 50px;
+}
+
+.wireframe-u45-2 .overlap-group {
+  height: 468px;
+  margin-left: 83.28px;
+  margin-top: 80px;
+  position: relative;
+  width: 654px;
+}
+
+.wireframe-u45-2 .frame-11 {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  left: 0;
+  min-height: 468px;
+  position: absolute;
+  top: 0;
+  width: 654px;
+}
+
+.wireframe-u45-2 .nome-completo {
+  letter-spacing: 0;
+  line-height: normal;
+  margin-top: -1px;
+  min-height: 31px;
+}
+
+.wireframe-u45-2 .rectangle-4 {
+  background-color: var(--cultured-pearl);
+  border-radius: 12.23px;
+  height: 51px;
+  margin-top: 21px;
+  width: 654px;
+}
+
+.wireframe-u45-2 .frame-11-item {
+  letter-spacing: 0;
+  line-height: normal;
+  margin-top: 19px;
+  min-height: 31px;
+}
+
+.wireframe-u45-2 .rectangle {
+  background-color: var(--cultured-pearl);
+  border-radius: 12.23px;
+  height: 51px;
+  margin-top: 21px;
+  width: 425px;
+}
+
+.wireframe-u45-2 .informao-1 {
+  height: 24px;
+  left: 203px;
+  object-fit: cover;
+  position: absolute;
+  top: 7px;
+  width: 21px;
+}
+
+.wireframe-u45-2 .frame-container {
+  align-items: flex-start;
+  align-self: center;
+  display: flex;
+  gap: 191px;
+  margin-right: 10.91px;
+  margin-top: 161px;
+  min-width: 531px;
+}
+
+.wireframe-u45-2 .frame-12 {
+  align-items: flex-start;
+  background-color: var(--congress-blue);
+  border-radius: 12.4px;
+  display: flex;
+  height: 59px;
+  overflow: hidden;
+  padding: 4.5px 11.6px;
+  width: 202px;
+}
+
+.wireframe-u45-2 .title {
+  letter-spacing: 0;
+  line-height: normal;
+  min-height: 47px;
+}
+
+.wireframe-u45-2 .frame-13 {
+  align-items: flex-start;
+  background-color: var(--congress-blue);
+  border-radius: 12.4px;
+  display: flex;
+  height: 59px;
+  overflow: hidden;
+  padding: 4.5px 11.6px;
+  width: 138px;
+}
+
+.wireframe-u45-2 .voltar {
+  letter-spacing: 0;
+  line-height: normal;
+  min-height: 47px;
+}
