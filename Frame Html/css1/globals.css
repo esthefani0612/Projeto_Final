@@ -1,0 +1,128 @@
+@import url("https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css");
+@import url("https://fonts.googleapis.com/css?family=Acme:400|Glory:500,400,600|Belgrano:400");
+/* The following line is used to measure usage of this code. You can remove it if you want. */
+@import url("https://px.animaapp.com/64f0e89963225e30fb02c7b8.64f0e89a63225e30fb02c7bb.XWGgxx8.hcp.png");
+
+
+
+.screen a {
+  display: contents;
+  text-decoration: none;
+}
+
+.container-center-horizontal {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  pointer-events: none;
+  width: 100%;
+}
+
+.container-center-horizontal > * {
+  flex-shrink: 0;
+  pointer-events: auto;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.overlap-group {
+  align-items: flex-end;
+  background-color: var(--white);
+  display: flex;
+  height: 86px;
+  justify-content: flex-end;
+  min-width: 1440px;
+  padding: 11.0px 17.5px;
+}
+
+.rectangle {
+  height: 43px;
+  margin-bottom: 3.95px;
+  object-fit: cover;
+  width: 43px;
+}
+
+.title {
+  letter-spacing: 0;
+  line-height: normal;
+  margin-bottom: 0.95px;
+  margin-left: 301px;
+  min-height: 51px;
+  min-width: 205px;
+}
+
+.frame-58 {
+  align-items: center;
+  display: flex;
+  gap: 10px;
+  margin-left: 416px;
+  min-width: 214px;
+}
+
+.seu-trabalho-mais-organizado {
+  letter-spacing: 0;
+  line-height: normal;
+  margin-bottom: 1.27px;
+  min-height: 42px;
+  min-width: 139px;
+  text-align: right;
+}
+
+.frame-1 {
+  align-items: flex-start;
+  background-color: var(--congress-blue);
+  border-radius: 32.98px/27.98px;
+  box-shadow: 0px 2.54px 2.54px #00000040;
+  display: flex;
+  height: 56px;
+  justify-content: flex-end;
+  min-width: 66px;
+  padding: 10.0px 23.3px;
+}
+
+.e {
+  letter-spacing: 0;
+  line-height: normal;
+  min-height: 35px;
+}
+
+.rectangle-3 {
+  align-self: center;
+  object-fit: cover;
+}
+
+.rectangle-4 {
+  background-color: var(--white);
+  border-radius: 15px;
+  height: 45px;
+  width: 250px;
+}
+
+.turno {
+  letter-spacing: 0;
+  line-height: normal;
+  margin-top: -1px;
+  min-height: 34px;
+  min-width: 65px;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.horrio-de-incio {
+  min-width: 191px;
+}
+
+.horrio-de-trmino {
+  min-width: 223px;
+}
+
+.horrio-de {
+  letter-spacing: 0;
+  line-height: normal;
+  margin-top: -1px;
+  min-height: 34px;
+  text-align: center;
+  white-space: nowrap;
+}

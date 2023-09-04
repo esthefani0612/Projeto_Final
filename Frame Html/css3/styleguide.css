@@ -1,0 +1,155 @@
+:root { 
+  --biscay: #143471;
+  --biscay-2: #152e70;
+  --black: #000000;
+  --black-2: #00000099;
+  --bon-jour: #dfdfdf;
+  --congress-blue: #053a8a;
+  --congress-blue-2: #053a8acc;
+  --cornflower: #95d1e499;
+  --eunry: #cca5a5;
+  --mint-tulip: #c4eeec;
+  --mint-tulip-2: #c4eeeb;
+  --mystic: #e0ebeb;
+  --regent-st-blue: #a8d5e3;
+  --white: #ffffff;
+ 
+  --font-size-m: 27.2px;
+  --font-size-s: 26px;
+  --font-size-xs: 23.8px;
+  --font-size-xxs: 23.5px;
+  --font-size-xxxs: 22.8px;
+  --font-size-xxxxs: 22.3px;
+  --font-size-xxxxxs: 19.1px;
+ 
+  --font-family-acme: "Acme", Helvetica;
+  --font-family-belgrano: "Belgrano", Helvetica;
+  --font-family-glory: "Glory", Helvetica;
+}
+.glory-medium-black-27-2px {
+  color: var(--black);
+  font-family: var(--font-family-glory);
+  font-size: var(--font-size-m);
+  font-style: normal;
+  font-weight: 500;
+}
+
+.glory-normal-black-23-5px {
+  color: var(--black);
+  font-family: var(--font-family-glory);
+  font-size: var(--font-size-xxs);
+  font-style: normal;
+  font-weight: 400;
+}
+
+.glory-medium-black-23-5px {
+  color: var(--black);
+  font-family: var(--font-family-glory);
+  font-size: var(--font-size-xxs);
+  font-style: normal;
+  font-weight: 500;
+}
+
+.glory-normal-black-22px {
+  color: var(--black);
+  font-family: var(--font-family-glory);
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 400;
+}
+
+.glory-normal-black-22-3px {
+  color: var(--black);
+  font-family: var(--font-family-glory);
+  font-size: var(--font-size-xxxxs);
+  font-style: normal;
+  font-weight: 400;
+}
+
+.glory-normal-black-25px {
+  color: var(--black);
+  font-family: var(--font-family-glory);
+  font-size: 25px;
+  font-style: normal;
+  font-weight: 400;
+}
+
+.glory-medium-biscay-20px {
+  color: var(--biscay);
+  font-family: var(--font-family-glory);
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+}
+
+.acme-normal-congress-blue-40px {
+  color: var(--congress-blue-2);
+  font-family: var(--font-family-acme);
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 400;
+}
+
+.glory-normal-congress-blue-19-1px {
+  color: var(--congress-blue);
+  font-family: var(--font-family-glory);
+  font-size: var(--font-size-xxxxxs);
+  font-style: normal;
+  font-weight: 400;
+}
+
+.belgrano-normal-white-27-3px {
+  color: var(--white);
+  font-family: var(--font-family-belgrano);
+  font-size: 27.3px;
+  font-style: normal;
+  font-weight: 400;
+}
+
+.glory-normal-black-22-5px {
+  color: var(--black);
+  font-family: var(--font-family-glory);
+  font-size: 22.5px;
+  font-style: normal;
+  font-weight: 400;
+}
+
+.glory-medium-biscay-30px {
+  color: var(--biscay-2);
+  font-family: var(--font-family-glory);
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 500;
+}
+
+.glory-medium-black-50px {
+  color: var(--black-2);
+  font-family: var(--font-family-glory);
+  font-size: 50px;
+  font-style: normal;
+  font-weight: 500;
+}
+
+.glory-normal-black-22-8px {
+  color: var(--black);
+  font-family: var(--font-family-glory);
+  font-size: var(--font-size-xxxs);
+  font-style: normal;
+  font-weight: 400;
+}
+
+.glory-semi-bold-white-21-8px {
+  color: var(--white);
+  font-family: var(--font-family-glory);
+  font-size: 21.8px;
+  font-style: normal;
+  font-weight: 600;
+}
+
+.glory-normal-black-26px {
+  color: var(--black);
+  font-family: var(--font-family-glory);
+  font-size: var(--font-size-s);
+  font-style: normal;
+  font-weight: 400;
+}

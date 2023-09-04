@@ -1,0 +1,258 @@
+/* screen - wireframe-u45-9 */
+
+.wireframe-u45-9 {
+  align-items: flex-start;
+  background-color: var(--bon-jour);
+  border: 1px none;
+  display: flex;
+  flex-direction: column;
+  height: 1024px;
+  width: 1440px;
+}
+
+.wireframe-u45-9 .overlap-group {
+  align-items: flex-end;
+  background-color: var(--white);
+  display: flex;
+  height: 86px;
+  justify-content: flex-end;
+  min-width: 1440px;
+  padding: 11.0px 17.5px;
+}
+
+.wireframe-u45-9 .rectangle {
+  height: 43px;
+  margin-bottom: 3.95px;
+  object-fit: cover;
+  width: 43px;
+}
+
+.wireframe-u45-9 .rectangle-1 {
+  align-self: center;
+  height: 35px;
+  margin-left: 51px;
+  margin-top: 5.0px;
+  object-fit: cover;
+  width: 35px;
+}
+
+.wireframe-u45-9 .rectangle-2 {
+  align-self: center;
+  height: 38px;
+  margin-left: 30px;
+  margin-top: 8.0px;
+  object-fit: cover;
+  width: 38px;
+}
+
+.wireframe-u45-9 .title {
+  letter-spacing: 0;
+  line-height: normal;
+  margin-bottom: 0.95px;
+  margin-left: 301px;
+  min-height: 51px;
+  min-width: 205px;
+}
+
+.wireframe-u45-9 .seu-trabalho-mais-organizado {
+  letter-spacing: 0;
+  line-height: normal;
+  margin-bottom: 1.27px;
+  min-height: 42px;
+  min-width: 139px;
+  text-align: right;
+}
+
+.wireframe-u45-9 .frame-1 {
+  align-items: flex-start;
+  background-color: var(--congress-blue);
+  border-radius: 32.98px/27.98px;
+  box-shadow: 0px 2.54px 2.54px #00000040;
+  display: flex;
+  height: 56px;
+  justify-content: flex-end;
+  min-width: 66px;
+  padding: 10.0px 23.3px;
+}
+
+.wireframe-u45-9 .e {
+  letter-spacing: 0;
+  line-height: normal;
+  min-height: 35px;
+}
+
+.wireframe-u45-9 .ol-bem-vindo-de-volta {
+  align-self: center;
+  color: var(--congress-blue);
+  font-family: var(--font-family-glory);
+  font-size: 30px;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: normal;
+  margin-right: 528.0px;
+  margin-top: 47px;
+  min-height: 34px;
+  min-width: 288px;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.wireframe-u45-9 .frame-67 {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-left: 89px;
+  margin-top: 46px;
+  min-height: 82px;
+  width: 703px;
+}
+
+.wireframe-u45-9 .nome-completo {
+  letter-spacing: 0;
+  line-height: normal;
+  margin-top: -1px;
+  min-height: 28px;
+  min-width: 155px;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.wireframe-u45-9 .rectangle-25 {
+  height: 39px;
+  width: 703px;
+}
+
+.wireframe-u45-9 .frame-68 {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-left: 89px;
+  margin-top: 10px;
+  min-height: 82px;
+  width: 702px;
+}
+
+.wireframe-u45-9 .telefone {
+  letter-spacing: 0;
+  line-height: normal;
+  margin-top: -1px;
+  min-height: 28px;
+  min-width: 81px;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.wireframe-u45-9 .rectangle-25-1 {
+  height: 39px;
+  width: 702px;
+}
+
+.wireframe-u45-9 .frame-67-1 {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-left: 89px;
+  margin-top: 25px;
+  min-height: 82px;
+  width: 702px;
+}
+
+.wireframe-u45-9 .e-mail {
+  letter-spacing: 0;
+  line-height: normal;
+  margin-top: -1px;
+  min-height: 28px;
+  min-width: 63px;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.wireframe-u45-9 .frame-69 {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-left: 89px;
+  margin-top: 18px;
+  min-height: 82px;
+  width: 703px;
+}
+
+.wireframe-u45-9 .senha {
+  letter-spacing: 0;
+  line-height: normal;
+  margin-top: -1px;
+  min-height: 28px;
+  min-width: 59px;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.wireframe-u45-9 .frame-container {
+  align-items: flex-start;
+  display: flex;
+  gap: 395px;
+  margin-left: 132px;
+  margin-top: 77px;
+  min-width: 639px;
+}
+
+.wireframe-u45-9 .frame-70 {
+  align-items: flex-start;
+  background-color: var(--congress-blue);
+  border-radius: 9.16px;
+  display: flex;
+  height: 44px;
+  overflow: hidden;
+  padding: 3.3px 8.5px;
+  width: 142px;
+}
+
+.wireframe-u45-9 .atualizar {
+  letter-spacing: 0;
+  line-height: normal;
+  min-height: 35px;
+}
+
+.wireframe-u45-9 .frame-15 {
+  align-items: flex-start;
+  background-color: var(--congress-blue);
+  border-radius: 9.16px;
+  display: flex;
+  height: 44px;
+  overflow: hidden;
+  padding: 3.3px 8.5px;
+  width: 102px;
+}
+
+.wireframe-u45-9 .voltar {
+  letter-spacing: 0;
+  line-height: normal;
+  min-height: 35px;
+}
+
+.wireframe-u45-9 .sistema-de-gesto-de-escala-de-trabalho {
+  letter-spacing: 0;
+  line-height: normal;
+  margin-left: 60px;
+  margin-top: 201px;
+  min-height: 27px;
+  min-width: 377px;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.wireframe-u45-9 .esthefani-campos2023 {
+  align-self: flex-end;
+  letter-spacing: 0;
+  line-height: normal;
+  margin-right: 18px;
+  margin-top: 46px;
+  min-height: 22px;
+  min-width: 191px;
+  text-align: center;
+  white-space: nowrap;
+}

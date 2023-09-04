@@ -1,0 +1,361 @@
+/* screen - wireframe-u45-6 */
+
+.wireframe-u45-6 {
+  align-items: flex-end;
+  background-color: var(--bon-jour);
+  border: 1px none;
+  display: flex;
+  flex-direction: column;
+  gap: 546px;
+  height: 1024px;
+  overflow: hidden;
+  width: 1440px;
+}
+
+.wireframe-u45-6 .overlap-group1 {
+  margin-top: -5px;
+  position: relative;
+}
+
+.wireframe-u45-6 .overlap-group {
+  left: 0;
+  position: absolute;
+  top: 0;
+}
+
+.wireframe-u45-6 .rectangle-14 {
+  background-color: var(--white);
+  height: 86px;
+  left: 2px;
+  position: absolute;
+  top: 5px;
+  width: 1440px;
+}
+
+.wireframe-u45-6 .title {
+  filter: blur(2px);;
+  left: 589px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  top: 28px;
+}
+
+.wireframe-u45-6 .rectangle {
+  height: 38px;
+  left: 183px;
+  object-fit: cover;
+  position: absolute;
+  top: 33px;
+  width: 38px;
+}
+
+.wireframe-u45-6 .rectangle-1 {
+  height: 43px;
+  left: 24px;
+  object-fit: cover;
+  position: absolute;
+  top: 33px;
+  width: 43px;
+}
+
+.wireframe-u45-6 .rectangle-2 {
+  height: 35px;
+  left: 118px;
+  object-fit: cover;
+  position: absolute;
+  top: 33px;
+  width: 35px;
+}
+
+.wireframe-u45-6 .frame-36 {
+  align-items: center;
+  display: flex;
+  gap: 10px;
+  height: 57px;
+  left: 1180px;
+  min-width: 214px;
+  position: absolute;
+  top: 24px;
+}
+
+.wireframe-u45-6 .seu-trabalho-mais-organizado {
+  letter-spacing: 0;
+  line-height: normal;
+  margin-bottom: 0.27px;
+  min-height: 42px;
+  min-width: 139px;
+  text-align: right;
+}
+
+.wireframe-u45-6 .frame-1 {
+  align-items: flex-start;
+  align-self: flex-end;
+  background-color: var(--congress-blue);
+  border-radius: 32.98px/27.98px;
+  box-shadow: 0px 2.54px 2.54px #00000040;
+  display: flex;
+  height: 56px;
+  justify-content: flex-end;
+  min-width: 66px;
+  padding: 10.0px 23.3px;
+}
+
+.wireframe-u45-6 .e {
+  letter-spacing: 0;
+  line-height: normal;
+  min-height: 35px;
+}
+
+.wireframe-u45-6 .frame-49 {
+  align-items: center;
+  display: flex;
+  gap: 31px;
+  height: 52px;
+  left: 67px;
+  min-width: 481px;
+  position: absolute;
+  top: 155px;
+}
+
+.wireframe-u45-6 .frame-42 {
+  align-items: flex-start;
+  background-color: var(--white);
+  border-radius: 7.83px;
+  display: flex;
+  height: 26px;
+  overflow: hidden;
+  padding: 0 5.5px;
+  width: 108px;
+}
+
+.wireframe-u45-6 .frame-43 {
+  align-items: flex-start;
+  background-color: var(--white);
+  border-radius: 7.83px;
+  display: flex;
+  height: 26px;
+  overflow: hidden;
+  padding: 0 5.5px;
+  width: 132px;
+}
+
+.wireframe-u45-6 .frame-44 {
+  align-items: flex-start;
+  background-color: var(--white);
+  border-radius: 7.83px;
+  display: flex;
+  height: 26px;
+  overflow: hidden;
+  padding: 0 5.5px;
+  width: 61px;
+}
+
+.wireframe-u45-6 .turno {
+  letter-spacing: 0;
+  line-height: normal;
+  margin-top: -0.78px;
+  min-height: 26px;
+  white-space: nowrap;
+}
+
+.wireframe-u45-6 .frame-50 {
+  align-items: center;
+  display: flex;
+  gap: 110px;
+  height: 52px;
+  left: 485px;
+  min-width: 498px;
+  position: absolute;
+  top: 155px;
+}
+
+.wireframe-u45-6 .frame-4 {
+  align-items: flex-start;
+  background-color: var(--white);
+  border-radius: 7.83px;
+  display: flex;
+  height: 52px;
+  overflow: hidden;
+  padding: 0 5.5px;
+  width: 86px;
+}
+
+.wireframe-u45-6 .horrio {
+  letter-spacing: 0;
+  line-height: normal;
+  margin-top: -0.78px;
+  min-height: 52px;
+}
+
+.wireframe-u45-6 .frame-47 {
+  align-items: flex-start;
+  background-color: var(--white);
+  border-radius: 7.83px;
+  display: flex;
+  height: 26px;
+  overflow: hidden;
+  padding: 0 5.5px;
+  width: 65px;
+}
+
+.wireframe-u45-6 .perito {
+  letter-spacing: 0;
+  line-height: normal;
+  margin-top: -0.78px;
+  min-height: 26px;
+  white-space: nowrap;
+}
+
+.wireframe-u45-6 .frame-41 {
+  align-items: flex-start;
+  display: flex;
+  gap: 13px;
+  height: 34px;
+  justify-content: flex-end;
+  left: 107px;
+  min-width: 87px;
+  position: absolute;
+  top: 356px;
+}
+
+.wireframe-u45-6 .frame-37 {
+  align-items: flex-start;
+  display: flex;
+  gap: 18px;
+  height: 35px;
+  left: 104px;
+  min-width: 110px;
+  position: absolute;
+  top: 108px;
+}
+
+.wireframe-u45-6 .ol-bem-vindos {
+  left: 128px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  top: 33px;
+  white-space: nowrap;
+}
+
+.wireframe-u45-6 .text-2 {
+  left: 347px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  top: 23px;
+  white-space: nowrap;
+}
+
+.wireframe-u45-6 .icon-eye {
+  height: 31px;
+  margin-top: 0;
+  width: 41px;
+}
+
+.wireframe-u45-6 .frame-55 {
+  align-items: flex-start;
+  display: flex;
+  gap: 29px;
+  height: 44px;
+  left: 1192px;
+  min-width: 186px;
+  position: absolute;
+  top: 228px;
+}
+
+.wireframe-u45-6 .frame-53 {
+  align-items: flex-start;
+  background-color: var(--regent-st-blue);
+  border-radius: 10px;
+  display: flex;
+  height: 44px;
+  overflow: hidden;
+  padding: 8px 11px;
+  width: 76px;
+}
+
+.wireframe-u45-6 .editar {
+  letter-spacing: 0;
+  line-height: normal;
+  min-height: 26px;
+  white-space: nowrap;
+}
+
+.wireframe-u45-6 .frame-52 {
+  align-items: flex-start;
+  background-color: var(--eunry);
+  border-radius: 10px;
+  display: flex;
+  height: 44px;
+  overflow: hidden;
+  padding: 8px 11px;
+  width: 81px;
+}
+
+.wireframe-u45-6 .excluir {
+  letter-spacing: 0;
+  line-height: normal;
+  min-height: 26px;
+  white-space: nowrap;
+}
+
+.wireframe-u45-6 .frame-56 {
+  align-items: flex-start;
+  display: flex;
+  gap: 29px;
+  height: 44px;
+  left: 1192px;
+  min-width: 186px;
+  position: absolute;
+  top: 296px;
+}
+
+.wireframe-u45-6 .frame-57 {
+  align-items: flex-start;
+  display: flex;
+  gap: 29px;
+  height: 44px;
+  left: 1192px;
+  min-width: 186px;
+  position: absolute;
+  top: 367px;
+}
+
+.wireframe-u45-6 .esthefani-campos2023 {
+  letter-spacing: 0;
+  line-height: normal;
+  margin-right: 9px;
+  min-height: 22px;
+  min-width: 191px;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.wireframe-u45-6 .data {
+  letter-spacing: 0;
+  line-height: normal;
+  margin-top: -0.78px;
+  min-height: 26px;
+  white-space: nowrap;
+}
+
+.wireframe-u45-6 .editar-3 {
+  letter-spacing: 0;
+  line-height: normal;
+  min-height: 26px;
+  white-space: nowrap;
+}
+
+.wireframe-u45-6 .excluir-3 {
+  letter-spacing: 0;
+  line-height: normal;
+  min-height: 26px;
+  white-space: nowrap;
+}
+
+.wireframe-u45-6 .overlap {
+  height: 441px;
+  width: 1442px;
+}

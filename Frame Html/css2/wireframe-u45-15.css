@@ -1,0 +1,170 @@
+/* screen - wireframe-u45-15 */
+
+.wireframe-u45-15 {
+  align-items: flex-start;
+  background-color: var(--bon-jour);
+  border: 1px none;
+  display: flex;
+  flex-direction: column;
+  height: 1024px;
+  width: 1440px;
+}
+
+.wireframe-u45-15 .rectangle {
+  height: 43px;
+  margin-bottom: 2.0px;
+  object-fit: cover;
+  width: 43px;
+}
+
+.wireframe-u45-15 .rectangle-1 {
+  height: 35px;
+  margin-bottom: 10.0px;
+  margin-left: 51px;
+  object-fit: cover;
+  width: 35px;
+}
+
+.wireframe-u45-15 .rectangle-2 {
+  height: 38px;
+  margin-bottom: 7.0px;
+  margin-left: 30px;
+  object-fit: cover;
+  width: 38px;
+}
+
+.wireframe-u45-15 .title {
+  letter-spacing: 0;
+  line-height: normal;
+  margin-bottom: 4.0px;
+  margin-left: 286px;
+  min-height: 51px;
+  min-width: 205px;
+}
+
+.wireframe-u45-15 .atualizar-dados {
+  letter-spacing: 0;
+  line-height: normal;
+  margin-left: 112px;
+  margin-top: 37px;
+  min-height: 34px;
+  white-space: nowrap;
+}
+
+.wireframe-u45-15 .frame-104 {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  margin-left: 112px;
+  margin-top: 40px;
+  min-height: 82px;
+  width: 614px;
+}
+
+.wireframe-u45-15 .nome-completo {
+  letter-spacing: 0;
+  line-height: normal;
+  margin-top: -1px;
+  min-height: 28px;
+  white-space: nowrap;
+}
+
+.wireframe-u45-15 .overlap-group {
+  align-items: flex-start;
+  padding: 13px 18px;
+}
+
+.wireframe-u45-15 .escreva {
+  letter-spacing: 0;
+  line-height: normal;
+  min-height: 18px;
+  white-space: nowrap;
+}
+
+.wireframe-u45-15 .frame-105 {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-left: 112px;
+  margin-top: 41px;
+  min-height: 85px;
+  width: 614px;
+}
+
+.wireframe-u45-15 .telefone {
+  letter-spacing: 0;
+  line-height: normal;
+  margin-top: -1px;
+  min-height: 28px;
+  white-space: nowrap;
+}
+
+.wireframe-u45-15 .overlap-group2 {
+  align-items: center;
+  padding: 0 11px;
+}
+
+.wireframe-u45-15 .escreva-apenas-nmeros {
+  letter-spacing: 0;
+  line-height: normal;
+  min-height: 18px;
+  min-width: 154px;
+  white-space: nowrap;
+}
+
+.wireframe-u45-15 .e-mail {
+  letter-spacing: 0;
+  line-height: normal;
+  margin-top: -1px;
+  min-height: 28px;
+  white-space: nowrap;
+}
+
+.wireframe-u45-15 .frame-107 {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  margin-left: 112px;
+  margin-top: 35px;
+  min-height: 82px;
+  width: 614px;
+}
+
+.wireframe-u45-15 .cpf {
+  letter-spacing: 0;
+  line-height: normal;
+  margin-top: -1px;
+  min-height: 28px;
+  white-space: nowrap;
+}
+
+.wireframe-u45-15 .overlap-group3 {
+  align-items: flex-start;
+  padding: 13px 11px;
+}
+
+.wireframe-u45-15 .frame-container {
+  align-items: flex-start;
+  display: flex;
+  gap: 95px;
+  margin-left: 112px;
+  margin-top: 51px;
+  min-width: 366px;
+}
+
+.wireframe-u45-15 .voltar {
+  letter-spacing: 0;
+  line-height: normal;
+  min-height: 28px;
+  white-space: nowrap;
+}
+
+.wireframe-u45-15 .overlap {
+  background-color: var(--mystic);
+  display: flex;
+  height: 48px;
+  min-width: 614px;
+}

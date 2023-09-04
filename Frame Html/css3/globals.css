@@ -1,0 +1,117 @@
+@import url("https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css");
+@import url("https://fonts.googleapis.com/css?family=Acme:400|Glory:500,400,600|Belgrano:400");
+/* The following line is used to measure usage of this code. You can remove it if you want. */
+@import url("https://px.animaapp.com/64f0e89963225e30fb02c7b8.64f0e89a63225e30fb02c7bb.TtAtnNg.hcp.png");
+
+
+
+.screen a {
+  display: contents;
+  text-decoration: none;
+}
+
+.container-center-horizontal {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  pointer-events: none;
+  width: 100%;
+}
+
+.container-center-horizontal > * {
+  flex-shrink: 0;
+  pointer-events: auto;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.rectangle-18 {
+  background-color: #c5c5c5;
+  height: 441px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 400px;
+}
+
+.x1828479-1 {
+  height: 34px;
+  margin-top: 0;
+  object-fit: cover;
+  width: 34px;
+}
+
+.sair {
+  align-self: center;
+  letter-spacing: 0;
+  line-height: normal;
+  margin-top: 1.75px;
+  min-height: 30px;
+  min-width: 41px;
+  white-space: nowrap;
+}
+
+.icon-person {
+  height: 35px;
+  margin-top: 0;
+  width: 35px;
+}
+
+.perfil {
+  align-self: center;
+  letter-spacing: 0;
+  line-height: normal;
+  margin-bottom: 1.81px;
+  min-height: 30px;
+  min-width: 56px;
+  white-space: nowrap;
+}
+
+.frame-39 {
+  align-items: center;
+  display: flex;
+  gap: 15px;
+  height: 39px;
+  justify-content: flex-end;
+  left: 104px;
+  min-width: 187px;
+  padding: 0 0.0px;
+  position: absolute;
+  top: 185px;
+}
+
+.icon-graph {
+  height: 39px;
+  width: 39px;
+}
+
+.criar-escalas {
+  align-self: flex-end;
+  letter-spacing: 0;
+  line-height: normal;
+  margin-bottom: 0.91px;
+  min-height: 30px;
+  min-width: 133px;
+  white-space: nowrap;
+}
+
+.frame-40 {
+  align-items: flex-start;
+  display: flex;
+  gap: 13px;
+  height: 31px;
+  left: 106px;
+  min-width: 173px;
+  position: absolute;
+  top: 262px;
+}
+
+.ver-escalas {
+  letter-spacing: 0;
+  line-height: normal;
+  margin-top: -0.91px;
+  min-height: 30px;
+  white-space: nowrap;
+}

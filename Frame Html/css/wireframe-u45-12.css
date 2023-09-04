@@ -1,0 +1,236 @@
+/* screen - wireframe-u45-12 */
+
+.wireframe-u45-12 {
+  align-items: flex-end;
+  background-color: var(--bon-jour);
+  border: 1px none;
+  display: flex;
+  flex-direction: column;
+  height: 1024px;
+  width: 1440px;
+}
+
+.wireframe-u45-12 .overlap-group {
+  align-items: flex-end;
+  background-color: var(--white);
+  display: flex;
+  height: 86px;
+  justify-content: flex-end;
+  min-width: 1440px;
+  padding: 11.0px 17.5px;
+}
+
+.wireframe-u45-12 .rectangle {
+  height: 43px;
+  margin-bottom: 3.95px;
+  object-fit: cover;
+  width: 43px;
+}
+
+.wireframe-u45-12 .rectangle-1 {
+  height: 35px;
+  margin-left: 51px;
+  margin-top: 5.0px;
+  width: 35px;
+}
+
+.wireframe-u45-12 .rectangle-2 {
+  height: 38px;
+  margin-left: 30px;
+  margin-top: 8.0px;
+  width: 38px;
+}
+
+.wireframe-u45-12 .title {
+  letter-spacing: 0;
+  line-height: normal;
+  margin-bottom: 0.95px;
+  margin-left: 301px;
+  min-height: 51px;
+  min-width: 205px;
+}
+
+.wireframe-u45-12 .seu-trabalho-mais-organizado {
+  letter-spacing: 0;
+  line-height: normal;
+  margin-bottom: 1.27px;
+  min-height: 42px;
+  min-width: 139px;
+  text-align: right;
+}
+
+.wireframe-u45-12 .frame-1 {
+  align-items: flex-start;
+  background-color: var(--congress-blue);
+  border-radius: 32.98px/27.98px;
+  box-shadow: 0px 2.54px 2.54px #00000040;
+  display: flex;
+  height: 56px;
+  justify-content: flex-end;
+  min-width: 66px;
+  padding: 10.0px 23.3px;
+}
+
+.wireframe-u45-12 .e {
+  letter-spacing: 0;
+  line-height: normal;
+  min-height: 35px;
+}
+
+.wireframe-u45-12 .flex-row {
+  align-items: flex-start;
+  display: flex;
+  gap: 843px;
+  height: 50px;
+  margin-right: 59.5px;
+  margin-top: 10px;
+  min-width: 1198px;
+}
+
+.wireframe-u45-12 .lista-de-peritos-no-setor {
+  color: var(--black);
+  font-family: var(--font-family-glory);
+  font-size: 30px;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: normal;
+  min-height: 34px;
+  min-width: 284px;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.wireframe-u45-12 .frame-15 {
+  align-items: flex-start;
+  align-self: flex-end;
+  background-color: var(--congress-blue);
+  border-radius: 6.87px;
+  display: flex;
+  height: 30px;
+  overflow: hidden;
+  padding: 1.3px 3.2px;
+  width: 70px;
+}
+
+.wireframe-u45-12 .voltar {
+  color: var(--white);
+  font-family: var(--font-family-belgrano);
+  font-size: 20.6px;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: normal;
+  min-height: 26px;
+}
+
+.wireframe-u45-12 .navbar-link-container {
+  align-items: flex-start;
+  align-self: flex-start;
+  display: flex;
+  height: 28px;
+  margin-left: 62px;
+  margin-top: 14px;
+  min-width: 928px;
+}
+
+.wireframe-u45-12 .navbar-link-cpf {
+  letter-spacing: 0;
+  line-height: normal;
+  min-height: 28px;
+  min-width: 35px;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.wireframe-u45-12 .navbar-link-place {
+  letter-spacing: 0;
+  line-height: normal;
+  margin-left: 130px;
+  min-height: 28px;
+  min-width: 59px;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.wireframe-u45-12 .navbar-link-telefone {
+  letter-spacing: 0;
+  line-height: normal;
+  margin-left: 322px;
+  min-height: 28px;
+  min-width: 81px;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.wireframe-u45-12 .navbar-link-e-mail {
+  letter-spacing: 0;
+  line-height: normal;
+  margin-left: 238px;
+  min-height: 28px;
+  min-width: 63px;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.wireframe-u45-12 .frame-111 {
+  align-items: flex-start;
+  background-color: var(--cornflower-2);
+  border-radius: 9.3px;
+  box-shadow: 0px 1.86px 1.86px #00000040;
+  display: flex;
+  height: 36px;
+  margin-right: 63.39px;
+  margin-top: 17px;
+  overflow: hidden;
+  padding: 2.3px 15.8px;
+  width: 120px;
+}
+
+.wireframe-u45-12 .gerar-relatrio-mensal {
+  letter-spacing: 0;
+  line-height: normal;
+  min-height: 30px;
+  min-width: 88px;
+  text-align: center;
+}
+
+.wireframe-u45-12 .frame-11 {
+  align-items: flex-start;
+  background-color: var(--cornflower-2);
+  border-radius: 9.3px;
+  box-shadow: 0px 1.86px 1.86px #00000040;
+  display: flex;
+  height: 36px;
+  margin-right: 63.39px;
+  margin-top: 20px;
+  overflow: hidden;
+  padding: 2.3px 15.8px;
+  width: 120px;
+}
+
+.wireframe-u45-12 .sistema-de-gesto-de-escala-de-trabalho {
+  align-self: flex-start;
+  letter-spacing: 0;
+  line-height: normal;
+  margin-left: 60px;
+  margin-top: 563px;
+  min-height: 27px;
+  min-width: 377px;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.wireframe-u45-12 .esthefani-campos2023 {
+  letter-spacing: 0;
+  line-height: normal;
+  margin-right: 18px;
+  margin-top: 39px;
+  min-height: 22px;
+  min-width: 191px;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.wireframe-u45-12 .rectangle-3 {
+  align-self: center;
+  object-fit: cover;
+}

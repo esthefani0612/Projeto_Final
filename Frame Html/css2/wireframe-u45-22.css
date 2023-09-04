@@ -1,0 +1,290 @@
+/* screen - wireframe-u45-22 */
+
+.wireframe-u45-22 {
+  align-items: flex-start;
+  background-color: var(--bon-jour);
+  border: 1px none;
+  display: flex;
+  flex-direction: column;
+  height: 1024px;
+  width: 1440px;
+}
+
+.wireframe-u45-22 .flex-col {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  min-height: 160px;
+  width: 1440px;
+}
+
+.wireframe-u45-22 .overlap-group {
+  align-items: flex-end;
+  background-color: var(--white);
+  display: flex;
+  height: 86px;
+  justify-content: flex-end;
+  min-width: 1440px;
+  padding: 11.0px 17.5px;
+}
+
+.wireframe-u45-22 .rectangle {
+  height: 43px;
+  margin-bottom: 3.95px;
+  object-fit: cover;
+  width: 43px;
+}
+
+.wireframe-u45-22 .rectangle-1 {
+  align-self: center;
+  height: 35px;
+  margin-left: 51px;
+  margin-top: 5.0px;
+  object-fit: cover;
+  width: 35px;
+}
+
+.wireframe-u45-22 .rectangle-2 {
+  align-self: center;
+  height: 38px;
+  margin-left: 30px;
+  margin-top: 8.0px;
+  object-fit: cover;
+  width: 38px;
+}
+
+.wireframe-u45-22 .title {
+  letter-spacing: 0;
+  line-height: normal;
+  margin-bottom: 0.95px;
+  margin-left: 301px;
+  min-height: 51px;
+  min-width: 205px;
+}
+
+.wireframe-u45-22 .frame-58 {
+  align-items: center;
+  display: flex;
+  gap: 10px;
+  margin-left: 416px;
+  min-width: 214px;
+}
+
+.wireframe-u45-22 .solicitar-substituio {
+  letter-spacing: 0;
+  line-height: normal;
+  margin-right: 61.0px;
+  min-height: 34px;
+  min-width: 245px;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.wireframe-u45-22 .flex-row {
+  align-items: flex-start;
+  display: flex;
+  gap: 15px;
+  height: 727px;
+  margin-left: 60px;
+  margin-top: 56px;
+  min-width: 897px;
+}
+
+.wireframe-u45-22 .flex-col-1 {
+  align-items: center;
+  min-height: 727px;
+  width: 377px;
+}
+
+.wireframe-u45-22 .frame-117 {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-right: 27.0px;
+  min-height: 90px;
+  width: 250px;
+}
+
+.wireframe-u45-22 .turno {
+  letter-spacing: 0;
+  line-height: normal;
+  margin-top: -1px;
+  min-height: 34px;
+  min-width: 65px;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.wireframe-u45-22 .rectangle-4 {
+  background-color: var(--white);
+  border-radius: 15px;
+  height: 45px;
+  width: 250px;
+}
+
+.wireframe-u45-22 .frame-115 {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin-right: 27.0px;
+  margin-top: 32px;
+  min-height: 82px;
+  width: 250px;
+}
+
+.wireframe-u45-22 .data {
+  letter-spacing: 0;
+  line-height: normal;
+  margin-top: -1px;
+  min-height: 34px;
+  min-width: 57px;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.wireframe-u45-22 .frame-120 {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  margin-left: 16.0px;
+  margin-top: 32px;
+  min-height: 96px;
+  width: 293px;
+}
+
+.wireframe-u45-22 .contato {
+  letter-spacing: 0;
+  line-height: normal;
+  margin-top: -1px;
+  min-height: 34px;
+  min-width: 92px;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.wireframe-u45-22 .rectangle-49 {
+  background-color: var(--white);
+  border-radius: 15px;
+  height: 45px;
+  width: 293px;
+}
+
+.wireframe-u45-22 .sistema-de-gesto-de-escala-de-trabalho {
+  color: var(--biscay);
+  font-family: var(--font-family-glory);
+  font-size: var(--font-size-s);
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: normal;
+  margin-top: 368px;
+  min-height: 27px;
+  min-width: 377px;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.wireframe-u45-22 .flex-col-2 {
+  align-items: flex-start;
+  gap: 296px;
+  min-height: 581px;
+  width: 505px;
+}
+
+.wireframe-u45-22 .frame-119 {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  min-height: 244px;
+  width: 474px;
+}
+
+.wireframe-u45-22 .razo-da-substituio {
+  letter-spacing: 0;
+  line-height: normal;
+  margin-top: -1px;
+  min-height: 34px;
+  min-width: 255px;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.wireframe-u45-22 .rectangle-47 {
+  background-color: var(--white);
+  border-radius: 15px;
+  height: 199px;
+  width: 474px;
+}
+
+.wireframe-u45-22 .frame-container {
+  align-items: flex-start;
+  align-self: flex-end;
+  display: flex;
+  gap: 133px;
+  min-width: 370px;
+}
+
+.wireframe-u45-22 .frame-94 {
+  align-items: flex-start;
+  background-color: var(--bahama-blue-2);
+  border-radius: 15.02px;
+  box-shadow: 0px 4px 4px #00000040;
+  display: flex;
+  height: 41px;
+  overflow: hidden;
+  padding: 3.3px 17.0px;
+  width: 127px;
+}
+
+.wireframe-u45-22 .solicitar {
+  color: var(--white);
+  font-family: var(--font-family-glory);
+  font-size: 29px;
+  font-weight: 600;
+  letter-spacing: 0;
+  line-height: normal;
+  min-height: 33px;
+  white-space: nowrap;
+}
+
+.wireframe-u45-22 .frame-15 {
+  align-items: flex-start;
+  background-color: var(--congress-blue);
+  border-radius: 8.38px;
+  display: flex;
+  height: 41px;
+  overflow: hidden;
+  padding: 3.6px 16px;
+  width: 110px;
+}
+
+.wireframe-u45-22 .voltar {
+  color: var(--white);
+  font-family: var(--font-family-belgrano);
+  font-size: 25.1px;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: normal;
+  min-height: 32px;
+}
+
+.wireframe-u45-22 .esthefani-campos2023 {
+  align-self: flex-end;
+  letter-spacing: 0;
+  line-height: normal;
+  margin-right: 18px;
+  margin-top: 39px;
+  min-height: 22px;
+  min-width: 191px;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.wireframe-u45-22 .flex-col-3 {
+  display: flex;
+  flex-direction: column;
+}

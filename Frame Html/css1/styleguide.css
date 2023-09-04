@@ -1,0 +1,91 @@
+:root { 
+  --biscay: #143471;
+  --black: #000000;
+  --bon-jour: #dfdfdf;
+  --congress-blue: #053a8a;
+  --congress-blue-2: #053a8acc;
+  --white: #ffffff;
+ 
+  --font-size-l: 40px;
+  --font-size-m: 30px;
+  --font-size-s: 29px;
+  --font-size-xs: 27.3px;
+  --font-size-xxs: 23.8px;
+  --font-size-xxxs: 20px;
+  --font-size-xxxxs: 19.1px;
+ 
+  --font-family-acme: "Acme", Helvetica;
+  --font-family-belgrano: "Belgrano", Helvetica;
+  --font-family-glory: "Glory", Helvetica;
+}
+.glory-normal-black-30px {
+  color: var(--black);
+  font-family: var(--font-family-glory);
+  font-size: var(--font-size-m);
+  font-style: normal;
+  font-weight: 400;
+}
+
+.acme-normal-congress-blue-40px {
+  color: var(--congress-blue-2);
+  font-family: var(--font-family-acme);
+  font-size: var(--font-size-l);
+  font-style: normal;
+  font-weight: 400;
+}
+
+.glory-normal-congress-blue-19-1px {
+  color: var(--congress-blue);
+  font-family: var(--font-family-glory);
+  font-size: var(--font-size-xxxxs);
+  font-style: normal;
+  font-weight: 400;
+}
+
+.belgrano-normal-white-27-3px {
+  color: var(--white);
+  font-family: var(--font-family-belgrano);
+  font-size: var(--font-size-xs);
+  font-style: normal;
+  font-weight: 400;
+}
+
+.glory-normal-biscay-23-8px {
+  color: var(--biscay);
+  font-family: var(--font-family-glory);
+  font-size: var(--font-size-xxs);
+  font-style: normal;
+  font-weight: 400;
+}
+
+.glory-medium-biscay-20px {
+  color: var(--biscay);
+  font-family: var(--font-family-glory);
+  font-size: var(--font-size-xxxs);
+  font-style: normal;
+  font-weight: 500;
+}
+
+.belgrano-normal-white-20-6px {
+  color: var(--white);
+  font-family: var(--font-family-belgrano);
+  font-size: 20.6px;
+  font-style: normal;
+  font-weight: 400;
+}
+
+.glory-medium-black-30px {
+  color: var(--black);
+  font-family: var(--font-family-glory);
+  font-size: var(--font-size-m);
+  font-style: normal;
+  font-weight: 500;
+}
+
+.glory-semi-bold-white-29px {
+  color: var(--white);
+  font-family: var(--font-family-glory);
+  font-size: var(--font-size-s);
+  font-style: normal;
+  font-weight: 600;
+}

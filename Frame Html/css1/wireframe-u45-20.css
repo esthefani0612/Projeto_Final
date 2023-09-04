@@ -1,0 +1,88 @@
+/* screen - wireframe-u45-20 */
+
+.wireframe-u45-20 {
+  align-items: flex-end;
+  background-color: var(--bon-jour);
+  border: 1px none;
+  display: flex;
+  flex-direction: column;
+  height: 1024px;
+  width: 1440px;
+}
+
+.wireframe-u45-20 .rectangle-1 {
+  height: 35px;
+  margin-left: 51px;
+  margin-top: 5.0px;
+  width: 35px;
+}
+
+.wireframe-u45-20 .rectangle-2 {
+  height: 38px;
+  margin-left: 30px;
+  margin-top: 8.0px;
+  width: 38px;
+}
+
+.wireframe-u45-20 .flex-row {
+  align-items: flex-start;
+  display: flex;
+  gap: 515px;
+  height: 33px;
+  margin-right: 59.5px;
+  margin-top: 27px;
+  min-width: 794px;
+}
+
+.wireframe-u45-20 .relatrio-do-ms {
+  color: var(--black);
+  font-family: var(--font-family-glory);
+  font-size: 27px;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: normal;
+  min-height: 30px;
+  min-width: 208px;
+  white-space: nowrap;
+}
+
+.wireframe-u45-20 .frame-15 {
+  align-items: flex-start;
+  align-self: flex-end;
+  background-color: var(--congress-blue);
+  border-radius: 6.87px;
+  display: flex;
+  height: 30px;
+  overflow: hidden;
+  padding: 1.3px 3.2px;
+  width: 70px;
+}
+
+.wireframe-u45-20 .voltar {
+  letter-spacing: 0;
+  line-height: normal;
+  min-height: 26px;
+}
+
+.wireframe-u45-20 .sistema-de-gesto-de-escala-de-trabalho {
+  align-self: flex-start;
+  letter-spacing: 0;
+  line-height: normal;
+  margin-left: 60px;
+  margin-top: 770px;
+  min-height: 27px;
+  min-width: 377px;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.wireframe-u45-20 .esthefani-campos2023 {
+  letter-spacing: 0;
+  line-height: normal;
+  margin-right: 18px;
+  margin-top: 39px;
+  min-height: 22px;
+  min-width: 191px;
+  text-align: center;
+  white-space: nowrap;
+}

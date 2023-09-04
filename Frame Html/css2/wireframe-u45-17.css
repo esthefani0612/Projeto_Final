@@ -1,0 +1,120 @@
+/* screen - wireframe-u45-17 */
+
+.wireframe-u45-17 {
+  align-items: flex-start;
+  background-color: var(--bon-jour);
+  border: 1px none;
+  display: flex;
+  flex-direction: column;
+  height: 1024px;
+  width: 1440px;
+}
+
+.wireframe-u45-17 .rectangle {
+  height: 43px;
+  margin-bottom: 2.0px;
+  object-fit: cover;
+  width: 43px;
+}
+
+.wireframe-u45-17 .rectangle-1 {
+  height: 35px;
+  margin-bottom: 10.0px;
+  margin-left: 51px;
+  object-fit: cover;
+  width: 35px;
+}
+
+.wireframe-u45-17 .rectangle-3 {
+  height: 38px;
+  margin-bottom: 7.0px;
+  margin-left: 30px;
+  object-fit: cover;
+  width: 38px;
+}
+
+.wireframe-u45-17 .title {
+  letter-spacing: 0;
+  line-height: normal;
+  margin-bottom: 4.0px;
+  margin-left: 286px;
+  min-height: 51px;
+  min-width: 205px;
+}
+
+.wireframe-u45-17 .atualizar-senha {
+  letter-spacing: 0;
+  line-height: normal;
+  margin-left: 112px;
+  margin-top: 37px;
+  min-height: 34px;
+  white-space: nowrap;
+}
+
+.wireframe-u45-17 .frame-104 {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  margin-left: 112px;
+  margin-top: 56px;
+  min-height: 82px;
+  width: 614px;
+}
+
+.wireframe-u45-17 .nome-de-usurio {
+  letter-spacing: 0;
+  line-height: normal;
+  margin-top: -1px;
+  min-height: 28px;
+  white-space: nowrap;
+}
+
+.wireframe-u45-17 .rectangle-2 {
+  background-color: var(--mystic);
+  height: 48px;
+  width: 614px;
+}
+
+.wireframe-u45-17 .frame-105 {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-left: 112px;
+  margin-top: 25px;
+  min-height: 85px;
+  width: 614px;
+}
+
+.wireframe-u45-17 .senha-atual {
+  letter-spacing: 0;
+  line-height: normal;
+  margin-top: -1px;
+  min-height: 28px;
+  white-space: nowrap;
+}
+
+.wireframe-u45-17 .name {
+  letter-spacing: 0;
+  line-height: normal;
+  margin-top: -1px;
+  min-height: 28px;
+  white-space: nowrap;
+}
+
+.wireframe-u45-17 .frame-container {
+  align-items: flex-start;
+  display: flex;
+  gap: 108px;
+  margin-left: 112px;
+  margin-top: 39px;
+  min-width: 379px;
+}
+
+.wireframe-u45-17 .voltar {
+  letter-spacing: 0;
+  line-height: normal;
+  min-height: 28px;
+  white-space: nowrap;
+}

@@ -1,0 +1,138 @@
+:root { 
+  --bahama-blue: #0a6192;
+  --bahama-blue-2: #0a6293;
+  --biscay: #143471;
+  --black: #000000;
+  --black-2: #00000066;
+  --bon-jour: #dfdfdf;
+  --congress-blue: #053a8a;
+  --congress-blue-2: #053a8acc;
+  --mint-tulip: #c4eeec;
+  --mint-tulip-2: #c4eeeb;
+  --mystic: #e0ebeb;
+  --white: #ffffff;
+  --wild-sand: #f3f3f3;
+ 
+  --font-size-l: 26px;
+  --font-size-m: 25px;
+  --font-size-s: 23.8px;
+  --font-size-xl: 30px;
+  --font-size-xs: 22.3px;
+  --font-size-xxs: 19.1px;
+  --font-size-xxxs: 16px;
+ 
+  --font-family-acme: "Acme", Helvetica;
+  --font-family-belgrano: "Belgrano", Helvetica;
+  --font-family-glory: "Glory", Helvetica;
+}
+.glory-normal-black-25px {
+  color: var(--black);
+  font-family: var(--font-family-glory);
+  font-size: var(--font-size-m);
+  font-style: normal;
+  font-weight: 400;
+}
+
+.glory-normal-black-22-3px {
+  color: var(--black);
+  font-family: var(--font-family-glory);
+  font-size: var(--font-size-xs);
+  font-style: normal;
+  font-weight: 400;
+}
+
+.acme-normal-congress-blue-40px {
+  color: var(--congress-blue-2);
+  font-family: var(--font-family-acme);
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 400;
+}
+
+.glory-normal-congress-blue-19-1px {
+  color: var(--congress-blue);
+  font-family: var(--font-family-glory);
+  font-size: var(--font-size-xxs);
+  font-style: normal;
+  font-weight: 400;
+}
+
+.belgrano-normal-white-27-3px {
+  color: var(--white);
+  font-family: var(--font-family-belgrano);
+  font-size: 27.3px;
+  font-style: normal;
+  font-weight: 400;
+}
+
+.glory-normal-black-30px {
+  color: var(--black);
+  font-family: var(--font-family-glory);
+  font-size: var(--font-size-xl);
+  font-style: normal;
+  font-weight: 400;
+}
+
+.glory-normal-black-22-5px {
+  color: var(--black);
+  font-family: var(--font-family-glory);
+  font-size: 22.5px;
+  font-style: normal;
+  font-weight: 400;
+}
+
+.glory-normal-black-16px {
+  color: var(--black-2);
+  font-family: var(--font-family-glory);
+  font-size: var(--font-size-xxxs);
+  font-style: normal;
+  font-weight: 400;
+}
+
+.glory-semi-bold-white-24-9px {
+  color: var(--white);
+  font-family: var(--font-family-glory);
+  font-size: 24.9px;
+  font-style: normal;
+  font-weight: 600;
+}
+
+.glory-medium-black-30px {
+  color: var(--black);
+  font-family: var(--font-family-glory);
+  font-size: var(--font-size-xl);
+  font-style: normal;
+  font-weight: 500;
+}
+
+.glory-medium-biscay-20px {
+  color: var(--biscay);
+  font-family: var(--font-family-glory);
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+}
+
+.glory-normal-black-31px {
+  color: var(--black);
+  font-family: var(--font-family-glory);
+  font-size: 31px;
+  font-style: normal;
+  font-weight: 400;
+}
+
+.glory-semi-bold-white-18-1px {
+  color: var(--white);
+  font-family: var(--font-family-glory);
+  font-size: 18.1px;
+  font-style: normal;
+  font-weight: 600;
+}
+
+.glory-normal-black-26px {
+  color: var(--black);
+  font-family: var(--font-family-glory);
+  font-size: var(--font-size-l);
+  font-style: normal;
+  font-weight: 400;
+}
