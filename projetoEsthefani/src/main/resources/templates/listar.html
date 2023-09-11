@@ -124,37 +124,34 @@
 			<span th:text="${mensagem}"></span>
 		</div>
 		
-		<div class="custom-table">
+	<div class="custom-table">
     <h3>Seus dados</h3>
     <table class="table">
-        <thead>
-            <tr>
-                <th>Nome</th>
-            </tr>
-            <tr>
-                <th>Telefone</th>
-            </tr>
-            <tr>
-                <th>E-mail</th>
-            </tr>
-            <tr>
-                <th>CPF</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr th:each="perito : ${perito}">
-                <td th:text="${perito.nome}"></td>
-                <td th:text="${perito.telefone}"></td>
-                <td th:text="${perito.email}"></td>
-                <td th:text="${perito.cpf}"></td>
-                <td>
-                    <a th:href="@{'/atualizar' + ${perito.cpf}}" class="btn btn-primary">EDITAR</a>
-                </td>
-            </tr>
-        </tbody>
+        <tr th:each="perito : ${perito}">
+            <td><strong>Nome:</strong></td>
+            <td><span th:text="${perito.nome}"></span></td>
+        </tr>
+        <tr th:each="perito : ${perito}">
+            <td><strong>Telefone:</strong></td>
+            <td><span th:text="${perito.telefone}"></span></td>
+        </tr>
+        <tr th:each="perito : ${perito}">
+            <td><strong>E-mail:</strong></td>
+            <td><span th:text="${perito.email}"></span></td>
+        </tr>
+        <tr th:each="perito : ${perito}">
+            <td><strong>CPF:</strong></td>
+            <td><span th:text="${perito.cpf}"></span></td>
+        </tr>
+        <tr th:each="perito : ${perito}">
+            <td>
+                <a th:href="@{'/atualizar' + ${perito.cpf}}" class="btn btn-primary">EDITAR</a>
+            </td>
+        </tr>
     </table>
-		<!--<a th:href="@{/entrar}" class="btn btn-primary">Novo perito</a>	-->
-		</div>
+</div>
+
+
 	<div class="custom-hora">
 	<h3>Visualize aqui, todas as <strong>horas extra </strong><br>que fez durante o mês</h3>
 	<table class="table">
@@ -182,7 +179,7 @@
 				</tr>
 			</tbody>
 	</table>
-	<a th:href="@{/solicitacao}" class="btn btn-primary">Solicitar Hora Extra</a>	
+	<a th:href="@{/dashbord-perito/solicitacao}" class="btn btn-primary">Solicitar Hora Extra</a>	
 
 	</div>
 	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>

@@ -1,7 +1,6 @@
 package br.ficdev.com.model;
 
 import java.time.LocalDate;
-import java.time.LocalTime;
 import java.util.List;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
@@ -21,10 +20,10 @@ public class EscalaTrabalho {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 	
-	private LocalDate data_inicio;
-	private LocalDate data_termino;
-	private LocalTime hora_entrada;
-	private LocalTime hora_saida;
+	private LocalDate data_inicio= LocalDate.now();
+	private LocalDate data_termino= LocalDate.now();
+	private String hora_entrada;
+	private String hora_saida;
 	private String turno;
 	
 	@OneToMany (mappedBy = "escala_id", cascade = CascadeType.ALL)
@@ -61,19 +60,19 @@ public class EscalaTrabalho {
 		this.data_termino = data_termino;
 	}
 
-	public LocalTime getHora_entrada() {
+	public String getHora_entrada() {
 		return hora_entrada;
 	}
 
-	public void setHora_entrada(LocalTime hora_entrada) {
+	public void setHora_entrada(String hora_entrada) {
 		this.hora_entrada = hora_entrada;
 	}
 
-	public LocalTime getHora_saida() {
+	public String getHora_saida() {
 		return hora_saida;
 	}
 
-	public void setHora_saida(LocalTime hora_saida) {
+	public void setHora_saida(String hora_saida) {
 		this.hora_saida = hora_saida;
 	}
 

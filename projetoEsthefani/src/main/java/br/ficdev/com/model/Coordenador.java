@@ -1,5 +1,7 @@
 package br.ficdev.com.model;
 
+import java.util.List;
+
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
 import jakarta.persistence.CascadeType;
@@ -39,7 +41,7 @@ public class Coordenador {
 
 	@OneToMany (mappedBy = "coordenador_id", cascade = CascadeType.ALL)
 	@JsonIgnore
-	private Perito meu_perito;
+	List<Perito> meu_perito;
 
 	//construtor
 	public Coordenador() {

@@ -1,7 +1,8 @@
 package br.ficdev.com.controller;
 
+import java.security.Principal;
+import java.util.Collections;
 import java.util.List;
-import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -14,6 +15,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
+import br.ficdev.com.model.HoraExtra;
 import br.ficdev.com.model.Perito;
 import br.ficdev.com.repository.HoraExtraRepositoty;
 import br.ficdev.com.repository.PeritoRepository;
@@ -22,7 +24,6 @@ import jakarta.validation.Valid;;
 @Controller
 @RequestMapping
 public class PeritoController {
-
 	@Autowired
 	HoraExtraRepositoty horaExtraRepo;
 	
@@ -34,14 +35,65 @@ public class PeritoController {
 //        return "tela-login";    }
 
     // Listar os dados do perito 
-    @GetMapping("/dashbord")
-    public ModelAndView listaPerito() {
+    @GetMapping("/dashbord-perito")
+    public ModelAndView listaPerito(Principal principal) {
         ModelAndView modelAndView = new ModelAndView("listar");
-        List<Perito> peritos = peritoRepo.findAll();
-        modelAndView.addObject("perito", peritos);
+
+        if (principal != null) {
+            // Recuperar o CPF do perito autenticado
+            String cpfPeritoAutenticado = principal.getName();
+            // Buscando o perito autenticado pelo CPF
+            Perito peritoAutenticado = peritoRepo.findById(cpfPeritoAutenticado).orElse(null);
+
+            if (peritoAutenticado != null) {
+                // Se o perito autenticado existe, coloque-o na lista
+                modelAndView.addObject("perito", Collections.singletonList(peritoAutenticado));
+
+                // Buscando as HorasExtras associadas ao perito autenticado
+                List<HoraExtra> horas = horaExtraRepo.findByPerito(peritoAutenticado);
+
+                modelAndView.addObject("horasExtra", horas);
+            } else {
+                // Caso contrário, essa mensagem de erro aparecerá.
+                modelAndView.addObject("mensagem", "Perito não encontrado.");}
+        } else {
+            // Caso o principal seja nulo (usuário não autenticado), será redirecionado para a página de login
+            modelAndView.setViewName("redirect:/login");}
+
         return modelAndView;
     }
 
+    
+    @PostMapping("/criar")
+	public ModelAndView cadastrarPeritos(@Valid @ModelAttribute("perito") Perito perito, BindingResult result) {
+		
+		ModelAndView modelAndView = new ModelAndView("cadastrar-perito");
+		if(result.hasErrors()) {
+			if(result.hasFieldErrors("cpf")) {
+				modelAndView.addObject("mensagem", "CPF inválido.");
+		}else if(result.hasFieldErrors("username")) {
+			modelAndView.addObject("mensagem", "Este campo não pode estar vazio");
+		}else if(result.hasFieldErrors("senha")) {
+			modelAndView.addObject("mensagem", "Este campo não pode estar vazio");
+		}else if(result.hasFieldErrors("email")) {
+			modelAndView.addObject("mensagem","email inválido");
+		}
+			return modelAndView;
+		}
+	
+		peritoRepo.save(perito);
+		modelAndView.addObject("mensagemsalvar", "Perito cadastrado no sistema.");
+	
+		return modelAndView;
+	}
+	
+    
+	
+	@GetMapping("/apagar/{id}")
+	public String deletarPerito(@PathVariable("id") String cpf) {
+		peritoRepo.deleteById(cpf);
+		return "redirect:/listar";
+	}
 
 
     //Atualizar os dados do perito
@@ -57,12 +109,10 @@ public class PeritoController {
 	    modelAndView.addObject("peritos", perito);
 
 	    if (result.hasErrors()) {
-	        if (result.hasFieldErrors("nome")) {
-	            modelAndView.addObject("mensagem", "O nome deve conter no mínimo 2 caracteres");
-	        } else if (result.hasFieldErrors("telefone")) {
-	            modelAndView.addObject("mensagem", "O UUID deve ser maior ou igual a 2");
+	        if (result.hasFieldErrors("cpf")) {
+	            modelAndView.addObject("mensagem", "CPF inválido.");
 	        }else if (result.hasFieldErrors("email")) {
-	            modelAndView.addObject("mensagem", "O padrão de cpf é inválido");
+	            modelAndView.addObject("mensagem", "email inválido.");
 	        }
 	        return modelAndView;
 	    }

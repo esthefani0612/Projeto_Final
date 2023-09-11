@@ -1,12 +1,18 @@
 package br.ficdev.com.model;
 
+import java.util.List;
+
 import org.hibernate.validator.constraints.br.CPF;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
+import jakarta.persistence.CascadeType;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
+import jakarta.persistence.OneToMany;
 import jakarta.persistence.Table;
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;
@@ -33,12 +39,16 @@ public class Perito {
 	
 	@Pattern(regexp = "\\d{10,11}", message = "Número de celular inválido")
 	@Column(name="celular")
-	private Integer telefone;
+	private String telefone;
 	
 	@Column
 	@Email
 	private String email;
 	
+	@OneToMany(mappedBy = "perito_cpf", cascade = CascadeType.ALL)
+	@JsonIgnore
+	private List<Perito_HoraExtra> horaextra;
+
 	@ManyToOne
 	@JoinColumn
 	private EscalaTrabalho escala_id;
@@ -101,12 +111,12 @@ public class Perito {
 	}
 
 
-	public Integer getTelefone() {
+	public String getTelefone() {
 		return telefone;
 	}
 
 
-	public void setTelefone(Integer telefone) {
+	public void setTelefone(String telefone) {
 		this.telefone = telefone;
 	}
 
