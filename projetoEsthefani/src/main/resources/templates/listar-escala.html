@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+	<title>Lista de escalas de trabalho</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+</head>
+<body>
+	<div class="container">
+		<div class="alert alert-success alert-dismissible" role="alert" th:if="${!#strings.isEmpty(mensagem)}">
+			<button type="button" class="close" data-dismiss="alert">
+				<span aria-hidden="true">&times;</span>
+			</button>
+			<span th:text="${mensagem}"></span>
+		</div>
+		<table class="table">
+			<thead>
+				<tr>
+					<th>Data de início</th>
+					<th>Data término</th>
+					<th>Turno</th>
+					<th>Horário de entrada</th>
+					<th>Horário de saída</th>
+					<th>Perito</th>
+					<th>Ações</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr th:each="escalas : ${escalas}">
+					<td th:text="${escalas.data_inicio}"></td>
+					<td th:text="${escalas.data_termino}"></td>
+					<td th:text="${escalas.hora_entrada}"></td>
+					<td th:text="${escalas.hora_saida}"></td>
+					<td th:text="${escalas.turno}"></td>
+					<td th:text="${escalas.atribuicao_perito}"></td>
+					<td>
+						<a th:href="@{/coordenador/escalas/atualizar-escala/{id}(id=${merendeira.id})}"
+							class="btn btn-primary">Editar</a>
+						<a th:href="@{/coordenador/escalas/apagar-escala/{id}(id=${escalas.id})}" class="btn btn-danger"
+							onclick="return confirm('Tem certeza que deseja excluir esta Escala do sistema?')">Excluir</a>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</body>
+</html>

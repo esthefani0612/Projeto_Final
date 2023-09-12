@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+	<title>Listagem de Merendeiras</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+</head>
+<body>
+	<div class="container">
+		<h2>Lista de Peritos no setor</h2>
+		<div class="alert alert-success alert-dismissible" role="alert" th:if="${!#strings.isEmpty(mensagem)}">
+			<button type="button" class="close" data-dismiss="alert">
+				<span aria-hidden="true">&times;</span>
+			</button>
+			<span th:text="${mensagem}"></span>
+		</div>
+		<table class="table">
+			<thead>
+				<tr>
+					<th>CPF</th>
+					<th>Nome</th>
+					<th>Telefone</th>
+					<th>E-mail</th>
+					<th>Ações</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr th:each="perito : ${perito}">
+					<td th:text="${perito.cpf}"></td>
+					<td th:text="${perito.nome}"></td>
+					<td th:text="${perito.telefone}"></td>
+					<td th:text="${perito.email}"></td>
+					<td>
+						<a th:href="@{/peritos/apagar/{id}(id=${perito.cpf})}" class="btn btn-danger"
+							onclick="return confirm('Tem certeza que deseja excluí-lo?')">Excluir</a>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+		<a th:href="@{/peritos/criar}" class="btn btn-primary">Cadastrar novo funcionário</a>	
+	</div>
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</body>
+</html>
