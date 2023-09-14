@@ -53,9 +53,6 @@ public class Perito {
 	@JoinColumn
 	private EscalaTrabalho escala_id;
 
-	@ManyToOne
-	@JoinColumn
-	private Coordenador coordenador_id;
 	
 	//construtor vazio
 	public Perito() {
@@ -83,13 +80,6 @@ public class Perito {
 	}
 
 
-	public Coordenador getCoordenador_id(){
-		return coordenador_id;
-	}
-
-	public void setCoordenador_id(Coordenador coordenador_id){
-		this.coordenador_id=coordenador_id;
-	}
 
 	public String getUsername() {
 		return username;

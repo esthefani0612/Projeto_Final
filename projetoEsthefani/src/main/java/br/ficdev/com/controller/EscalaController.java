@@ -14,6 +14,7 @@ import org.springframework.web.servlet.ModelAndView;
 
 
 import br.ficdev.com.model.EscalaTrabalho;
+import br.ficdev.com.model.Perito;
 import br.ficdev.com.repository.EscalaRepository;
 @Controller
 @RequestMapping("/coordenador/escalas")
@@ -22,8 +23,14 @@ public class EscalaController {
 	@Autowired
 	EscalaRepository escalaRepo;
 	
-	
 	@GetMapping
+	public String mostraForm(Model model) {
+		model.addAttribute("escala", new EscalaTrabalho());
+		return "criar-escala";
+	}
+	
+	
+	@GetMapping("/listar-escalas")
 	public ModelAndView listaEscalas() {
 		ModelAndView modelAndView = new ModelAndView("listar-escala");
 		List<EscalaTrabalho> escalas = escalaRepo.findAll();
@@ -33,9 +40,9 @@ public class EscalaController {
 
 	
 	@PostMapping("/criar-escala")
-	public ModelAndView criarEscaladeTrabalho(@ModelAttribute("escalas") EscalaTrabalho escalaTrabalho) {
+	public ModelAndView criarEscaladeTrabalho(@ModelAttribute("escala") EscalaTrabalho escalaTrabalho) {
 	    
-	    ModelAndView modelAndView = new ModelAndView("criar-escala-de-trabalho");
+	    ModelAndView modelAndView = new ModelAndView("criar-escala");
 	  
 	    escalaRepo.save(escalaTrabalho);
 	    modelAndView.addObject("mensagemsalvar", "Escala criada com sucesso!");

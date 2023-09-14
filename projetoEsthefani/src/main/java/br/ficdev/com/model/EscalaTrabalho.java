@@ -20,8 +20,8 @@ public class EscalaTrabalho {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 	
-	private LocalDate data_inicio= LocalDate.now();
-	private LocalDate data_termino= LocalDate.now();
+	private LocalDate data_inicio;
+	private LocalDate data_termino;
 	private String hora_entrada;
 	private String hora_saida;
 	private String turno;

@@ -17,19 +17,39 @@
 			margin: 0;
             padding: 0;
 		}
-		
-		
+		.container h2{
+			font-family:'Times New Roman', Times, serif;
+			font-size: 26px;
+			color: #053A8A;
+			text-align: center;
+			margin-top: 5%;
+			
+		}
+		.cadastro1 {
+            position: relative;
+            background-color: white;
+			font-family: "Glory";
+			font-size: 16px;
+            z-index: 1;
+            width: 36%;
+            margin-top: -32%;
+    		text-align: left;
+            padding: 20px;
+            margin-left: 650px;
+            border-radius: 20px; /* Cantos arredondados */
+        }
+        
 		.cadastro {
             position: relative;
             background-color: white;
 			font-family: "Glory";
-			font-size: 14px;
+			font-size: 16px;
             z-index: 1;
             width: 36%;
-            margin-top: 47px;
+            margin-top: 70px;
     		text-align: left;
             padding: 20px;
-            margin-left: 800px;
+            margin-left: 160px;
             border-radius: 20px; /* Cantos arredondados */
         }
         
@@ -53,7 +73,28 @@
               font-style: normal;
               font-weight: 400;
         }
-            
+        .logo img {
+            position: absolute;
+            top: 22px;
+            left: 42px; /* Ajuste a distância do canto esquerdo conforme necessário */
+            width: 24px;
+            height: 24px;
+        }
+        .imagem2 img{
+			position: absolute;
+            top: 24%;
+            left: 137px; /* Ajuste a distância do canto esquerdo conforme necessário */
+            width: 25px;
+            height: 25px;
+		}
+		 .imagem2 h3 {
+			 color: #053A8A;
+            font-size: 14px;
+            text-align: center;
+            margin-top: 0px; /* Espaçamento superior para separar da imagem */
+            position: absolute;
+            width: 20%; /* Define a largura igual à largura da imagem */
+        }
         /* Estilo para o retângulo branco na parte superior */
         .logo {
             background-color: rgb(255, 255, 255);
@@ -62,10 +103,17 @@
 		    position: absolute;
 		    top: 0;
 		    left: 0;
-		    width: 1830px; /* Largura desejada do retângulo */
-		    height: 10%; /* Altura igual à altura da página */
+		    width: 1380px; /* Largura desejada do retângulo */
+		    height: 14%; /* Altura igual à altura da página */
 		    z-index: 1; 
         }
+        .logo h3{
+			font-size: 14px;
+			position: absolute;
+            top: 38px;
+            left: 17px;
+            color: #053A8A;
+		}
          .logo h1 {
             font-weight: bold;
             color: #053A8A;
@@ -100,7 +148,7 @@
 		}
 		
 	</style>
-	<title>Dashbord</title>
+	<title>Crie escalas de trabalho</title>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
@@ -108,6 +156,10 @@
 <body style="margin: 0; background: #dfdfdf">
 	<div class="logo">
         <h1>EscalaOnline</h1>
+        <a th:href="@{/coordenador/escalas}"><h3>criar escalas</h3></a>
+		<div class="imagem2">
+			<a th:href="@{/coordenador/escalas/listar-escalas}"><h3>ver escalas</h3></a>
+		</div>
         <div class="logo-do-canto">
             <div class="seu-trabalho-mais-organizado">
               <span>Seu Trabalho Mais <br />Organizado!</span>
@@ -122,7 +174,7 @@
 
 
 	<div class="container">
-		<form action="#" th:action="@{/coordenador/escalas/criar-escala}" th:object="${escalas}" method="post">
+		<form action="#" th:action="@{/coordenador/escalas/criar-escala}" th:object="${escala}" method="post">
 			
 
 			<div class="alert alert-danger" role="alert" th:if="${!#strings.isEmpty(mensagem)}">
@@ -138,42 +190,44 @@
 				</button>
 				<span th:text="${mensagemsalvar}"></span>
 			</div>
-			<div class="cadastro">
+			
 			<h2>Crie abaixo uma escala de trabalho!</h2>
+			
+			<div class="cadastro">
 			<div class="form-group">
 			    <label for="data_inicio">Data início</label>
-			    <input class="input-small"  type="text" th:field="*{data_inicio}"  id="data_inicio" required>
+			    <input class="input-small"  type="date" th:field="*{data_inicio}"  id="data_inicio" required>
 			</div>
 			
 			<div class="form-group">
 				<label for="data_termino">Data término</label>
-				<input type="text" th:field="*{data_termino}" class="input-small" id="data_termino" required>
+				<input type="date" th:field="*{data_termino}" class="input-small" id="data_termino" required>
 			</div>
 			
 			<div class="form-group">
-				<label for="telefone">Telefone:</label>
-				<input type="text" th:field="*{telefone}" class="input-small" id="telefone" required>
+				<label for="turno">Turno</label>
+				<input type="text" th:field="*{turno}" class="input-small" id="turno" required>
 			</div>
 			
 			<div class="form-group">
-				<label for="email">Email:</label>
-				<input type="text" th:field="*{email}" class="input-small"  id="email" required>
+				<label for="atribuicao_perito">Perito Atribuído</label>
+				<input type="text" th:field="*{atribuicao_perito}" class="input-small"  id="atribuicao_perito" required>
+			</div>
+			</div>
+			<div class="cadastro1">
+			<div class="form-group">
+				<label for="hora_entrada">Horário de entrada</label>
+				<input type="time" th:field="*{hora_entrada}" class="input-small"  id="hora_entrada" required>
 			</div>
 			
 			<div class="form-group">
-				<label for="username">Username:</label>
-				<input type="text" th:field="*{username}" class="input-small"  id="username" required>
-			</div>
-			
-			<div class="form-group">
-				<label for="senha">Senha:</label>
-				<input type="password" th:field="*{senha}" class="input-small"  id="senha" required>
+				<label for="hora_saida">Horário de saída</label>
+				<input type="time" th:field="*{hora_saida}" class="input-small"  id="hora_saida" required>
 			</div>
 			<a th:href="@{/coordenador/escalas/criar-escala}"><button type="submit" class="btn btn-primary">Cadastrar</button></a>
-			<a th:href="@{/coordenador/listar-perito}" class="btn btn-primary">Ver todos os Peritos</a>
-			
+			<a th:href="@{/coordenador}"><button type="button" class="btn btn-primary">Voltar</button></a>
+			</div>
 		</form>
-		</div>
 		</div>
 	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>

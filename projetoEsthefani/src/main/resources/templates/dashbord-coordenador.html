@@ -65,12 +65,14 @@
 		    height: 14%; /* Altura igual à altura da página */
 		    z-index: 1; 
         }
-        .logo img {
+  
+		  .imagem2 h3 {
+			 color: #053A8A;
+            font-size: 14px;
+            text-align: center;
+            margin-top: 0px; /* Espaçamento superior para separar da imagem */
             position: absolute;
-            top: 22px;
-            left: 30px; /* Ajuste a distância do canto esquerdo conforme necessário */
-            width: 24px;
-            height: 24px;
+            width: 20%; /* Define a largura igual à largura da imagem */
         }
          .logo h1 {
             font-weight: bold;
@@ -79,8 +81,9 @@
         .logo h3{
 			font-size: 14px;
 			position: absolute;
-            top: 50px;
+            top: 38px;
             left: 17px;
+            color: #053A8A;
 		}
         .logo-do-canto {
              position: absolute;
@@ -141,8 +144,10 @@
 <body style="margin: 0; background: #dfdfdf">
 	<div class="logo">
         <h1>EscalaOnline</h1>
-		<a th:href="@{/coordenador/escalas}"><img src="imagens/escalas.png"></a>
-		<h3>escalas</h3>
+		<a th:href="@{/coordenador/escalas}"><h3>criar escalas</h3></a>
+		<div class="imagem2">
+			<a th:href="@{/coordenador/escalas/listar-escalas}"><h3>ver escalas</h3></a>
+		</div>
         <div class="logo-do-canto">
             <div class="seu-trabalho-mais-organizado">
               <span>Seu Trabalho Mais <br />Organizado!</span>

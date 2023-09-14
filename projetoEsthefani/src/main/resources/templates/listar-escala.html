@@ -24,13 +24,29 @@
 		    position: absolute;
 		    top: 0;
 		    left: 0;
-		    width: 1830px; /* Largura desejada do retângulo */
-		    height: 10%; /* Altura igual à altura da página */
+		    width: 1390px; /* Largura desejada do retângulo */
+		    height: 14%; /* Altura igual à altura da página */
 		    z-index: 1; 
         }
          .logo h1 {
             font-weight: bold;
             color: #053A8A;
+        }
+        .logo h3{
+			font-size: 14px;
+			position: absolute;
+            top: 38px;
+            left: 17px;
+            color: #053A8A;
+		}
+        
+		  .imagem2 h3 {
+			color: #053A8A;
+            font-size: 14px;
+            text-align: center;
+            margin-top: 0px; /* Espaçamento superior para separar da imagem */
+            position: absolute;
+            width: 20%; /* Define a largura igual à largura da imagem */
         }
         .logo-do-canto {
              position: absolute;
@@ -77,6 +93,10 @@
 <body style="margin: 0; background: #dfdfdf">
 	<div class="logo">
         <h1>EscalaOnline</h1>
+        <a th:href="@{/coordenador/escalas}"><h3>criar escalas</h3></a>
+		<div class="imagem2">
+			<a th:href="@{/coordenador/escalas/listar-escalas}"><h3>ver escalas</h3></a>
+		</div>
         <div class="logo-do-canto">
             <div class="seu-trabalho-mais-organizado">
               <span>Seu Trabalho Mais <br />Organizado!</span>
@@ -102,10 +122,9 @@
 				<tr>
 					<th>Data de início</th>
 					<th>Data término</th>
-					<th>Turno</th>
 					<th>Horário de entrada</th>
 					<th>Horário de saída</th>
-					<th>Perito</th>
+					<th>Turno</th>
 					<th>Ações</th>
 				</tr>
 			</thead>
@@ -115,10 +134,9 @@
 					<td th:text="${escalas.data_termino}"></td>
 					<td th:text="${escalas.hora_entrada}"></td>
 					<td th:text="${escalas.hora_saida}"></td>
-					<td th:text="${escalas.turno}"></td>
-					<td th:text="${escalas.atribuicao_perito}"></td>
-					<td>
-						<a th:href="@{/coordenador/escalas/atualizar-escala/{id}(id=${merendeira.id})}"
+					<td th:text="${escalas.turno}"></td>	
+                	<td>
+						<a th:href="@{/coordenador/escalas/atualizar-escala/{id}(id=${escalas.id})}"
 							class="btn btn-primary">Editar</a>
 						<a th:href="@{/coordenador/escalas/apagar-escala/{id}(id=${escalas.id})}" class="btn btn-danger"
 							onclick="return confirm('Tem certeza que deseja excluir esta Escala do sistema?')">Excluir</a>
@@ -126,6 +144,7 @@
 				</tr>
 			</tbody>
 		</table>
+		<a th:href="@{/coordenador}"><button type="button" class="btn btn-primary">Voltar</button></a>
 	</div>
 	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
