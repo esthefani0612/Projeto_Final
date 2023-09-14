@@ -6,19 +6,28 @@
 		body{
 			margin: 0;
             padding: 0;
-            
+            font-family: "Glory";
 		}
-		.container {
-            position: relative;
-        }
-		
-        .letra-E{
+		.botao{
+			color: white;
+		}
+		.container h2{
+			font-size: 23px;
+			margin-top: 50px;
+			text-align: center;
+		}
+		.letra-E{
               color: var(--white);
               font-family: var(--font-family-Glory);
               font-size: 27.3px;
               font-style: normal;
               font-weight: 400;
         }
+        
+        .inputs{
+			width: 350px;
+    		height: 74px;
+		}
             
         /* Estilo para o retângulo branco na parte superior */
         .logo {
@@ -26,6 +35,7 @@
             text-align: center;
             padding: 20px 0; /* Espaçamento superior e inferior */
         }
+        
          .logo h1 {
             font-weight: bold;
             color: #053A8A;
@@ -48,9 +58,7 @@
               min-width: 66px;
               padding: 10.0px 23.3px;
             }
-        .margin-top{
-			margin-top: 3%;
-		}
+        
 		.seu-trabalho-mais-organizado{
 			color: #053A8A;
 			letter-spacing: 0;
@@ -60,14 +68,13 @@
 			min-width: 139px;
 			text-align: right;
 		}
-		
-		
-    </style>
-	<title>Listagem de Merendeiras</title>
+	</style>
+	<title>Atualize seus dados</title>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
 </head>
+
 <body style="margin: 0; background: #dfdfdf">
 	<div class="logo">
         <h1>EscalaOnline</h1>
@@ -83,41 +90,53 @@
     	</div>
     </div>
     
-	<div class="container margin-top" style="font-family: 'Times New Roman', Times, serif;",>
-		<h2 style="font-size: 27px; color: #053A8A; text-align: center;">Lista de Peritos no setor</h2>
-		
-		<div class="alert alert-success alert-dismissible" role="alert" th:if="${!#strings.isEmpty(mensagem)}">
-			<button type="button" class="close" data-dismiss="alert">
-				<span aria-hidden="true">&times;</span>
-			</button>
-			<span th:text="${mensagem}"></span>
-		</div>
-		<br>
-		<table class="table">
-			<thead>
-				<tr>
-					<th>CPF</th>
-					<th>Nome</th>
-					<th>Telefone</th>
-					<th>E-mail</th>
-					<th>Ações</th>
-				</tr>
-			</thead>
-			<tbody>
-				<tr th:each="perito : ${perito}">
-					<td th:text="${perito.cpf}"></td>
-					<td th:text="${perito.nome}"></td>
-					<td th:text="${perito.telefone}"></td>
-					<td th:text="${perito.email}"></td>
-					<td>
-						<a th:href="@{/peritos/apagar/{id}(id=${perito.cpf})}" class="btn btn-danger"
-							onclick="return confirm('Tem certeza que deseja excluí-lo?')">Excluir</a>
-					</td>
-				</tr>
-			</tbody>
-		</table>	
+	<div class="container">
+		<strong><h2>Preencha os campos!</h2></strong>			<!--sempre verificar esta parte abaixo, pois os nomes coordenadores e coordenador pode dar erro-->
+		<form action="#" th:action="@{/coordenador/atualizar/{id}(id=${coordenadores.id})}" th:object="${coordenador}"
+			method="post">
+
+			<div class="alert alert-danger" role="alert" th:if="${not #strings.isEmpty(mensagem)}">
+				<button type="button" class="close" data-dismiss="alert">
+					<span aria-hidden="true">&times;</span>
+				</button>
+				<span th:text="${mensagem}"></span>
+			</div>
+
+			<div class="alert alert-success" role="alert" th:if="${not #strings.isEmpty(mensagemsalvar)}">
+				<button type="button" class="close" data-dismiss="alert">
+					<span aria-hidden="true">&times;</span>
+				</button>
+				<span th:text="${mensagemsalvar}"></span>
+			</div>
+
+			<input type="hidden" name="id" th:value="${coordenador.id}">
+			<div class="form-group  inputs">
+				<label for="nome">Nome</label>
+				<input type="text" th:field="*{nome}" th:value="${coordenador.nome}"
+					class="form-control inputs" id="nome">
+			</div>
+
+			<div class="form-group inputs">
+				<label for="telefone">Telefone:</label>
+				<input type="text" th:field="*{telefone}" th:value="${coordenador.telefone}" class="form-control" id="telefone">
+			</div>
+
+			<div class="form-group  inputs">
+				<label for="email">E-mail</label>
+				<input type="text" th:field="*{email}" th:value="${coordenador.email}" class="form-control" id="email">
+			</div>
+			
+			<div class="form-group  inputs">
+				<label for="username">Username:</label>
+				<input type="text" th:field="*{username}" th:value="${coordenador.username}" class="form-control" id="username">
+			</div>
+			<button type="submit" class="btn btn-primary">Atualizar</button>
+			<a th:href="@{/coordenador/listar}"><button type="button" class="btn btn-primary" style="margin-left: 189px;">Voltar</button></a>
+
+
+		</form>
 	</div>
-	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 </body>
+
 </html>

@@ -4,7 +4,7 @@
 <head>
 	<style>
 		.bem-vindo{
-			font-size: 22px;
+			font-size: 24px;
 			align-self: flex-start;
 			letter-spacing: 0;
 			line-height: normal;
@@ -12,6 +12,8 @@
 			margin-top: 30px;
 			min-height: 35px;
 			white-space: nowrap;
+			text-align: center;
+			color: #053A8A;
 		}
 		body{
 			margin: 0;
@@ -21,26 +23,14 @@
 		.container {
             position: relative;
         }
-        .custom-hora{
-			background-color: white;
-			font-family: "Glory", sans-serif;
-            position: absolute;
-            z-index: 1;
-            margin-top: 47px;
-    		text-align: center;
-            padding: 20px;
-		}
-		.custom-hora h3{
-			font-size: 17px;
-			margin-bottom: 20px;
-		}
+      
         .custom-table {
             background-color: white;
             padding: 20px;
             font-family: "Glory", sans-serif;
             position: absolute;
             top: 200;
-            right: 0;
+
             z-index: 1;
         }
         .letra-E{
@@ -92,7 +82,7 @@
 		
 		
     </style>
-	<title>Dashbord</title>
+	<title>Seus dados</title>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
@@ -113,10 +103,10 @@
     </div>
          
     <div class="bem-vindo">
-          <span>Olá. Bem- vindo!</span>
+          <strong><span>Olá. Bem-vido de volta!</span></strong>
     </div>
     
-	<div class="container">
+    <div class="container">
 		<div class="alert alert-success alert-dismissible" role="alert" th:if="${!#strings.isEmpty(mensagem)}">
 			<button type="button" class="close" data-dismiss="alert">
 				<span aria-hidden="true">&times;</span>
@@ -125,65 +115,31 @@
 		</div>
 		
 	<div class="custom-table">
-    <h3>Seus dados</h3>
     <table class="table">
-        <tr th:each="perito : ${perito}">
+        <tr th:each="coordenadores : ${coordenador}">
             <td><strong>Nome:</strong></td>
-            <td><span th:text="${perito.nome}"></span></td>
+            <td><span th:text="${coordenador.nome}"></span></td>
         </tr>
-        <tr th:each="perito : ${perito}">
+        <tr th:each="coordenadores: ${coordenador}">
             <td><strong>Telefone:</strong></td>
-            <td><span th:text="${perito.telefone}"></span></td>
+            <td><span th:text="${coordenador.telefone}"></span></td>
         </tr>
-        <tr th:each="perito : ${perito}">
+        <tr th:each="coordenadores : ${coordenador}">
             <td><strong>E-mail:</strong></td>
-            <td><span th:text="${perito.email}"></span></td>
+            <td><span th:text="${coordenador.email}"></span></td>
         </tr>
-        <tr th:each="perito : ${perito}">
-            <td><strong>CPF:</strong></td>
-            <td><span th:text="${perito.cpf}"></span></td>
+        <tr th:each="coordenadores : ${coordenador}">
+            <td><strong>Username:</strong></td>
+            <td><span th:text="${coordenador.username}"></span></td>
         </tr>
-        <tr th:each="perito : ${perito}">
+        <tr th:each="coordenadores : ${coordenador}">
             <td>
-                <a th:href="@{'/atualizar' + ${perito.cpf}}" class="btn btn-primary">EDITAR</a>
+                <a th:href="@{'/atualizar/{id}}" class="btn btn-primary">EDITAR</a>
             </td>
+            <td>
+				<a th:href="@{/coordenador}" class="btn btn-primary">Voltar</a>
+			</td>
         </tr>
     </table>
 </div>
-
-
-	<div class="custom-hora">
-	<h3>Visualize aqui, todas as <strong>horas extra </strong><br>que fez durante o mês</h3>
-	<table class="table">
-			<thead>
-				<tr>
-					<th>Dia</th>
-					<th>Turno</th>
-					<th>Hora de início</th>
-					<th>Hora de término</th>
-					<th>Horas totais</th>
-				</tr>		
-			</thead>
-			<tbody>
-				<tr th:each="horasExtras : ${horasExtras}">
-					<td th:text="${horasExtras.dia}"></td>
-					<td th:text="${horasExtras.turno}"></td>
-					<td th:text="${horasExtras.hora_inicio}"></td>
-					<td th:text="${horasExtras.hora_termino}"></td>
-					<td th:text="${horasExtras.hora_total}"></td>
-					<td>
-				<!--<a th:href="@{/apagar/{id}(id=${perito.id})}" class="btn btn-danger"
-					onclick="return confirm('Tem certeza que deseja excluir?')">Excluir</a>
-					-->
-					</td>
-				</tr>
-			</tbody>
-	</table>
-	<a th:href="@{/dashbord-perito/solicitacao}" class="btn btn-primary">Solicitar Hora Extra</a>	
-
-	</div>
-	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-	</div>
-</body>
-</html>
+    

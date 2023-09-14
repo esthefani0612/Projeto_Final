@@ -3,6 +3,7 @@
 <head>
 	<style>
 		.bem-vindo{
+			color: #053A8A;
 			font-size: 22px;
 			align-self: flex-start;
 			letter-spacing: 0;
@@ -35,9 +36,7 @@
 			font-size: 18px;
 			text-align: center;
 		}
-        .container cadastro form-group {
-            margin-bottom: 60px; /* Espaçamento entre as caixas de input */
-        }
+        
         .container cadastro input-small {
 		    width: 100%; /* Ocupa toda a largura do seu contêiner */
             height: 30px; /* Altura desejada para as caixas de input */
@@ -66,10 +65,23 @@
 		    height: 14%; /* Altura igual à altura da página */
 		    z-index: 1; 
         }
+        .logo img {
+            position: absolute;
+            top: 22px;
+            left: 30px; /* Ajuste a distância do canto esquerdo conforme necessário */
+            width: 24px;
+            height: 24px;
+        }
          .logo h1 {
             font-weight: bold;
             color: #053A8A;
         }
+        .logo h3{
+			font-size: 14px;
+			position: absolute;
+            top: 50px;
+            left: 17px;
+		}
         .logo-do-canto {
              position: absolute;
             top: 20px; /* Ajuste a distância do topo conforme necessário */
@@ -88,6 +100,27 @@
               min-width: 66px;
               padding: 10.0px 23.3px;
             }
+            .form-group {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            margin-bottom: 15px;
+            
+        }
+
+        .form-group label {
+            text-align: right;
+            margin-bottom: 5px;
+        }
+
+        .form-group input {
+            width: 100%; /* Faz com que a caixa de entrada ocupe toda a largura do seu contêiner */
+            height: 30px; /* Altura desejada para as caixas de entrada */
+            font-size: 13px;
+            padding: 5px;
+            background-color: rgb(180, 216, 216);
+            border-radius: 20px; /* Cantos arredondados */
+        }
         
 		.seu-trabalho-mais-organizado{
 			color: #053A8A;
@@ -108,6 +141,8 @@
 <body style="margin: 0; background: #dfdfdf">
 	<div class="logo">
         <h1>EscalaOnline</h1>
+		<a th:href="@{/coordenador/escalas}"><img src="imagens/escalas.png"></a>
+		<h3>escalas</h3>
         <div class="logo-do-canto">
             <div class="seu-trabalho-mais-organizado">
               <span>Seu Trabalho Mais <br />Organizado!</span>
@@ -121,7 +156,7 @@
     </div>
          
     <div class="bem-vindo">
-          <span>Olá. Bem- vindo!</span>
+          <span>Bem- vindo!</span>
     </div>
 
 	<div class="container">
@@ -171,10 +206,10 @@
 			
 			<div class="form-group">
 				<label for="senha">Senha:</label>
-				<input type="password" th:field="*{senha}" class="input-dados" style="background-color: rgb(180, 216, 216);" id="senha" required>
+				<input type="password" th:field="*{senha}" class="input-dados" id="senha" required>
 			</div>
 			<button type="submit" class="btn btn-primary">Cadastrar</button>
-			<a th:href="@{/coordenador/listar-perito}" class="btn btn-primary">Ver todos os Peritos</a>
+			<a th:href="@{/coordenador/listar-perito}"><button type="button" class="btn btn-primary" style="margin-left: 178px; margin-top: -53px;">Ver todos os Peritos</button></a>
 			
 		</form>
 		</div>

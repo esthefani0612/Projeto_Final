@@ -2,6 +2,9 @@
 <img xmlns:th="http://www.thymeleaf.org">
 <head>
 	<style>
+		.alertas{
+			margin-top: 7%;
+		}
 		.bem-vindo{
 			font-size: 25px;
 			align-self: flex-start;
@@ -18,33 +21,22 @@
             padding: 0;
 		}
 		
-		
-		.cadastro {
-            position: relative;
-            background-color: white;
-			font-family: "Glory";
-			font-size: 14px;
-            z-index: 1;
-            width: 36%;
-            margin-top: 47px;
-    		text-align: left;
-            padding: 20px;
-            margin-left: 800px;
-            border-radius: 20px; /* Cantos arredondados */
-        }
-        
 		.cadastro h2{
 			font-size: 18px;
 			text-align: center;
+			color: #053A8A;
 		}
-        
+        .container {
+            position: relative;
+        }
         .input-small {
-		    width: 100%; /* Ocupa toda a largura do seu contêiner */
+		    width: 20%; /* Ocupa toda a largura do seu contêiner */
             height: 30px; /* Altura desejada para as caixas de input */
             font-size: 13px;
             padding: 5px;
             background-color: rgb(180, 216, 216);
             display: block;
+            border-radius: 20px; /* Cantos arredondados */
 		}
         .letra-E{
               color: var(--white);
@@ -62,8 +54,8 @@
 		    position: absolute;
 		    top: 0;
 		    left: 0;
-		    width: 1830px; /* Largura desejada do retângulo */
-		    height: 10%; /* Altura igual à altura da página */
+		    width: 1380px; /* Largura desejada do retângulo */
+		    height: 14%; /* Altura igual à altura da página */
 		    z-index: 1; 
         }
          .logo h1 {
@@ -98,9 +90,14 @@
 			min-width: 139px;
 			text-align: right;
 		}
-		
+		.solicitacao{
+			font-size: 24px;
+			color: #053A8A;
+			text-align: center;
+			margin-top: 3%;
+		}
 	</style>
-	<title>Dashbord</title>
+	<title>Solicitação</title>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
@@ -120,57 +117,52 @@
     	</div>
     </div>
 
-
 	<div class="container">
-		<form action="#" th:action="@{/coordenador/escalas/criar-escala}" th:object="${escalas}" method="post">
-			
-
-			<div class="alert alert-danger" role="alert" th:if="${!#strings.isEmpty(mensagem)}">
+		<form action="#" th:action="@{/dashbord-perito/solicitacao/criar-hora-extra}" th:object="${horaExtra}" method="post">
+		
+			<div class="alert alert-danger alertas" role="alert" th:if="${!#strings.isEmpty(mensagem)}">
 				<button type="button" class="close" data-dismiss="alert">
 					<span aria-hidden="true">&times;</span>
 				</button>
 				<span th:text="${mensagem}"></span>
 			</div>
-			
-			<div class="alert alert-success" role="alert" th:if="${!#strings.isEmpty(mensagemsalvar)}">
+		
+			<div class="alert alert-success alertas" role="alert" th:if="${!#strings.isEmpty(mensagemsalvar)}">
 				<button type="button" class="close" data-dismiss="alert">
 					<span aria-hidden="true">&times;</span>
 				</button>
 				<span th:text="${mensagemsalvar}"></span>
 			</div>
-			<div class="cadastro">
-			<h2>Crie abaixo uma escala de trabalho!</h2>
+		
+			<div>
+			<h2 class="solicitacao">Solicitar Hora Extra</h2>
 			<div class="form-group">
-			    <label for="data_inicio">Data início</label>
-			    <input class="input-small"  type="text" th:field="*{data_inicio}"  id="data_inicio" required>
+			    <label for="dia">Dia</label>
+			    <input class="input-small"  type="text" th:field="*{dia}"  id="dia" required>
 			</div>
 			
 			<div class="form-group">
-				<label for="data_termino">Data término</label>
-				<input type="text" th:field="*{data_termino}" class="input-small" id="data_termino" required>
+				<label for="turno">Turno</label>
+				<input type="text" th:field="*{turno}" class="input-small" id="turno" required>
 			</div>
 			
 			<div class="form-group">
-				<label for="telefone">Telefone:</label>
-				<input type="text" th:field="*{telefone}" class="input-small" id="telefone" required>
+				<label for="hora_inicio">Horário de início</label>
+				<input type="text" th:field="*{hora_inicio}" class="input-small" id="hora_inicio" required>
 			</div>
 			
 			<div class="form-group">
-				<label for="email">Email:</label>
-				<input type="text" th:field="*{email}" class="input-small"  id="email" required>
+				<label for="hora_termino">Horário de término</label>
+				<input type="text" th:field="*{hora_termino}" class="input-small"  id="hora_termino" required>
 			</div>
 			
 			<div class="form-group">
-				<label for="username">Username:</label>
-				<input type="text" th:field="*{username}" class="input-small"  id="username" required>
+				<label for="hora_total">Horas Totais</label>
+				<input type="text" th:field="*{hora_total}" class="input-small"  id="hora_total" required>
 			</div>
 			
-			<div class="form-group">
-				<label for="senha">Senha:</label>
-				<input type="password" th:field="*{senha}" class="input-small"  id="senha" required>
-			</div>
-			<a th:href="@{/coordenador/escalas/criar-escala}"><button type="submit" class="btn btn-primary">Cadastrar</button></a>
-			<a th:href="@{/coordenador/listar-perito}" class="btn btn-primary">Ver todos os Peritos</a>
+			<a th:href="@{/peritos/dashbord-perito/solicitacao/criar-hora-extra}"><button type="submit" class="btn btn-primary">Solicitar Horas extra</button></a>
+			<a th:href="@{/peritos/dashbord-perito}" style="margin-left: 80px;"><button type="button" class="btn btn-primary">Voltar</button></a>
 			
 		</form>
 		</div>

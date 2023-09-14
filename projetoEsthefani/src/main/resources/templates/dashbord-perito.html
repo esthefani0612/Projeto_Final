@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+	<style>
+		.bem-vindo{
+			font-size: 22px;
+			align-self: flex-start;
+			letter-spacing: 0;
+			line-height: normal;
+			margin-left: 116px;
+			margin-top: 30px;
+			min-height: 35px;
+			white-space: nowrap;
+		}
+		body{
+			margin: 0;
+            padding: 0;
+            font-family: "Glory", sans-serif;
+		}
+		.container {
+            position: relative;
+        }
+        .custom-hora{
+			background-color: white;
+			font-family: "Glory", sans-serif;
+            position: absolute;
+            z-index: 1;
+            margin-top: 47px;
+    		text-align: center;
+            padding: 20px;
+		}
+		.custom-hora h3{
+			font-size: 17px;
+			margin-bottom: 20px;
+		}
+        .custom-table {
+            background-color: white;
+            padding: 20px;
+            font-family: "Glory", sans-serif;
+            position: absolute;
+            top: 200;
+            right: 0;
+            z-index: 1;
+        }
+        .letra-E{
+              color: var(--white);
+              font-family: var(--font-family-Glory);
+              font-size: 27.3px;
+              font-style: normal;
+              font-weight: 400;
+        }
+            
+        /* Estilo para o retângulo branco na parte superior */
+        .logo {
+            background-color: rgb(255, 255, 255);
+            text-align: center;
+            padding: 20px 0; /* Espaçamento superior e inferior */
+        }
+         .logo h1 {
+            font-weight: bold;
+            color: #053A8A;
+        }
+        .logo-do-canto {
+             position: absolute;
+            top: 20px; /* Ajuste a distância do topo conforme necessário */
+            right: 20px; /* Ajuste a distância da direita conforme necessário */
+            display: flex;
+            align-items: center;
+            }
+        .frame-E {
+              align-items: flex-start;
+              background-color:#053A8A;
+              border-radius: 32.98px/27.98px;
+              box-shadow: 0px 2.54px 2.54px #00000040;
+              display: flex;
+              height: 56px;
+              justify-content: flex-end;
+              min-width: 66px;
+              padding: 10.0px 23.3px;
+            }
+        
+		.seu-trabalho-mais-organizado{
+			color: #053A8A;
+			letter-spacing: 0;
+			line-height: normal;
+			margin-bottom: 1.27px;
+			min-height: 42px;
+			min-width: 139px;
+			text-align: right;
+		}
+		
+		
+    </style>
+	<title>Dashbord</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+</head>
+<body style="margin: 0; background: #dfdfdf">
+	<div class="logo">
+        <h1>EscalaOnline</h1>
+        <div class="logo-do-canto">
+            <div class="seu-trabalho-mais-organizado">
+              <span>Seu Trabalho Mais <br />Organizado!</span>
+            </div>
+            <div class="frame-E">
+              <div class="letra-E">
+				  <span>E</span>
+			  </div>
+            </div>
+    	</div>
+    </div>
+         
+    <div class="bem-vindo">
+          <span>Olá. Bem- vindo!</span>
+    </div>
+    
+	<div class="container">
+		<div class="alert alert-danger alert-dismissible" role="alert" th:if="${!#strings.isEmpty(mensagem)}">
+			<button type="button" class="close" data-dismiss="alert">
+				<span aria-hidden="true">&times;</span>
+			</button>
+			<span th:text="${mensagem}"></span>
+		</div>
+		
+	<div class="custom-table">
+    <h3>Seus dados</h3>
+    <table class="table">
+        <tr th:each="perito : ${perito}">
+            <td><strong>Nome:</strong></td>
+            <td><span th:text="${perito.nome}"></span></td>
+        </tr>
+        <tr th:each="perito : ${perito}">
+            <td><strong>Telefone:</strong></td>
+            <td><span th:text="${perito.telefone}"></span></td>
+        </tr>
+        <tr th:each="perito : ${perito}">
+            <td><strong>E-mail:</strong></td>
+            <td><span th:text="${perito.email}"></span></td>
+        </tr>
+        <tr th:each="perito : ${perito}">
+            <td><strong>CPF:</strong></td>
+            <td><span th:text="${perito.cpf}"></span></td>
+        </tr>
+        <tr th:each="perito : ${perito}">
+            <td>
+                <a th:href="@{'/atualizar' + ${perito.cpf}}" class="btn btn-primary">EDITAR</a>
+            </td>
+        </tr>
+    </table>
+</div>
+
+
+	<div class="custom-hora">
+	<h3>Visualize aqui, todas as <strong>horas extra </strong><br>que fez durante o mês</h3>
+	<table class="table">
+			<thead>
+				<tr>
+					<th>Dia</th>
+					<th>Turno</th>
+					<th>Hora de início</th>
+					<th>Hora de término</th>
+					<th>Horas totais</th>
+				</tr>		
+			</thead>
+			<tbody>
+				<tr th:each="horasExtras : ${horasExtras}">
+					<td th:text="${horasExtras.dia}"></td>
+					<td th:text="${horasExtras.turno}"></td>
+					<td th:text="${horasExtras.hora_inicio}"></td>
+					<td th:text="${horasExtras.hora_termino}"></td>
+					<td th:text="${horasExtras.hora_total}"></td>
+					<td>
+				<!--<a th:href="@{/apagar/{id}(id=${perito.id})}" class="btn btn-danger"
+					onclick="return confirm('Tem certeza que deseja excluir?')">Excluir</a>
+					-->
+					</td>
+				</tr>
+			</tbody>
+	</table>
+	<a th:href="@{/dashbord-perito/solicitacao}" class="btn btn-primary">Solicitar Hora Extra</a>	
+
+	</div>
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+	</div>
+</body>
+</html>

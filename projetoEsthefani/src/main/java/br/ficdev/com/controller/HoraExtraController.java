@@ -3,6 +3,7 @@ package br.ficdev.com.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -24,14 +25,14 @@ public class HoraExtraController {
 	
 	@GetMapping
 	public String mostraForm(HoraExtra horaExtra) {
-		return "solicitar-hora-extra";
+		return "criar-horaextra";
 	}
 	
 	
 	@PostMapping("/criar-hora-extra")
-	public ModelAndView solicitacaoHoraExtra(@ModelAttribute("horasExtras") HoraExtra hora) {
-		ModelAndView model = new ModelAndView("solicitacao-HoraExtra");
-		horaExtraRepo.save(hora);
+	public ModelAndView solicitacaoHoraExtra(@ModelAttribute("horaExtra") HoraExtra hora, BindingResult result) {
+		ModelAndView model = new ModelAndView("criar-horaextra");
+		horaExtraRepo.saveAndFlush(hora);
 		model.addObject("mensagemsalvar","Solicitação enviada.");
 		return model;
 	}

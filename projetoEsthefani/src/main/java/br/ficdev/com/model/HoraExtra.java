@@ -23,7 +23,7 @@ public class HoraExtra {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
-	private LocalDate dia = LocalDate.now();
+	private LocalDate dia;
 	private String turno;
 	private LocalTime hora_inicio;
 	private LocalTime hora_termino;

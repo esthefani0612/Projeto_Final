@@ -22,7 +22,7 @@ import br.ficdev.com.repository.PeritoRepository;
 import jakarta.validation.Valid;;
 
 @Controller
-@RequestMapping
+@RequestMapping("/peritos")
 public class PeritoController {
 	@Autowired
 	HoraExtraRepositoty horaExtraRepo;
@@ -37,7 +37,7 @@ public class PeritoController {
     // Listar os dados do perito 
     @GetMapping("/dashbord-perito")
     public ModelAndView listaPerito(Principal principal) {
-        ModelAndView modelAndView = new ModelAndView("listar");
+        ModelAndView modelAndView = new ModelAndView("dashbord-perito");
 
         if (principal != null) {
             // Recuperar o CPF do perito autenticado
@@ -62,37 +62,13 @@ public class PeritoController {
 
         return modelAndView;
     }
-
-    
-    @PostMapping("/criar")
-	public ModelAndView cadastrarPeritos(@Valid @ModelAttribute("perito") Perito perito, BindingResult result) {
-		
-		ModelAndView modelAndView = new ModelAndView("cadastrar-perito");
-		if(result.hasErrors()) {
-			if(result.hasFieldErrors("cpf")) {
-				modelAndView.addObject("mensagem", "CPF inválido.");
-		}else if(result.hasFieldErrors("username")) {
-			modelAndView.addObject("mensagem", "Este campo não pode estar vazio");
-		}else if(result.hasFieldErrors("senha")) {
-			modelAndView.addObject("mensagem", "Este campo não pode estar vazio");
-		}else if(result.hasFieldErrors("email")) {
-			modelAndView.addObject("mensagem","email inválido");
-		}
-			return modelAndView;
-		}
-	
-		peritoRepo.save(perito);
-		modelAndView.addObject("mensagemsalvar", "Perito cadastrado no sistema.");
-	
-		return modelAndView;
-	}
 	
     
 	
 	@GetMapping("/apagar/{id}")
 	public String deletarPerito(@PathVariable("id") String cpf) {
 		peritoRepo.deleteById(cpf);
-		return "redirect:/listar";
+		return "redirect:/coordenador/listar-perito";
 	}
 
 

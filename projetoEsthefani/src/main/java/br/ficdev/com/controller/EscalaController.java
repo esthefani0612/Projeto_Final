@@ -25,7 +25,7 @@ public class EscalaController {
 	
 	@GetMapping
 	public ModelAndView listaEscalas() {
-		ModelAndView modelAndView = new ModelAndView("listar-escalas");
+		ModelAndView modelAndView = new ModelAndView("listar-escala");
 		List<EscalaTrabalho> escalas = escalaRepo.findAll();
 		modelAndView.addObject("escalas", escalas);
 		return modelAndView;
