@@ -22,7 +22,7 @@ import br.ficdev.com.repository.PeritoRepository;
 import jakarta.validation.Valid;;
 
 @Controller
-@RequestMapping("/peritos")
+@RequestMapping("/perito")
 public class PeritoController {
 	@Autowired
 	HoraExtraRepositoty horaExtraRepo;
@@ -30,9 +30,9 @@ public class PeritoController {
     @Autowired
     PeritoRepository peritoRepo;
 
-//    @GetMapping
-//    public String mostrarLogin(Perito perito){
-//        return "tela-login";    }
+    @GetMapping
+    public String mostrarLogin(Perito perito){
+        return "login";    }
 
     // Listar os dados do perito 
     @GetMapping("/dashbord-perito")

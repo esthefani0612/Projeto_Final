@@ -2,33 +2,23 @@
 <img xmlns:th="http://www.thymeleaf.org">
 <head>
 	<style>
-		.bem-vindo{
-			font-size: 25px;
-			align-self: flex-start;
-			letter-spacing: 0;
-			line-height: normal;
-			margin-left: 120px;
-			margin-top: 130px;
-			min-height: 35px;
-			white-space: nowrap;
-			font-family: "Glory";
-		}
+		
 		body{
 			margin: 0;
             padding: 0;
 		}
 		.container h2{
-			font-family:'Times New Roman', Times, serif;
+			font-family:serif;
 			font-size: 26px;
 			color: #053A8A;
 			text-align: center;
-			margin-top: 5%;
+			margin-top: 9%;
 			
 		}
 		.cadastro1 {
             position: relative;
             background-color: white;
-			font-family: "Glory";
+			font-family: serif;
 			font-size: 16px;
             z-index: 1;
             width: 36%;
@@ -42,7 +32,7 @@
 		.cadastro {
             position: relative;
             background-color: white;
-			font-family: "Glory";
+			font-family: serif;
 			font-size: 16px;
             z-index: 1;
             width: 36%;
@@ -68,32 +58,17 @@
 		}
         .letra-E{
               color: var(--white);
-              font-family: var(--font-family-Glory);
+              font-family: serif;
               font-size: 27.3px;
               font-style: normal;
               font-weight: 400;
         }
-        .logo img {
-            position: absolute;
-            top: 22px;
-            left: 42px; /* Ajuste a distância do canto esquerdo conforme necessário */
-            width: 24px;
-            height: 24px;
-        }
-        .imagem2 img{
+		  .imagem2 h3 {
+			font-size: 14px;
 			position: absolute;
-            top: 24%;
-            left: 137px; /* Ajuste a distância do canto esquerdo conforme necessário */
-            width: 25px;
-            height: 25px;
-		}
-		 .imagem2 h3 {
-			 color: #053A8A;
-            font-size: 14px;
-            text-align: center;
-            margin-top: 0px; /* Espaçamento superior para separar da imagem */
-            position: absolute;
-            width: 20%; /* Define a largura igual à largura da imagem */
+            top: 38px;
+            left: 122px;
+            color: #053A8A; 
         }
         /* Estilo para o retângulo branco na parte superior */
         .logo {
@@ -107,17 +82,18 @@
 		    height: 14%; /* Altura igual à altura da página */
 		    z-index: 1; 
         }
-        .logo h3{
-			font-size: 14px;
-			position: absolute;
-            top: 38px;
-            left: 17px;
-            color: #053A8A;
-		}
+       
          .logo h1 {
             font-weight: bold;
             color: #053A8A;
         }
+        .imagem3 h3{
+			font-size: 14px;
+			position: absolute;
+            top: 37px;
+            left: 220px;
+            color: #053A8A;
+		}
         .logo-do-canto {
              position: absolute;
             top: 20px; /* Ajuste a distância do topo conforme necessário */
@@ -146,7 +122,13 @@
 			min-width: 139px;
 			text-align: right;
 		}
-		
+		.imagem1 h3{
+			font-size: 14px;
+			position: absolute;
+            top: 38px;
+            left: 17px;
+            color: #053A8A;
+		}
 	</style>
 	<title>Crie escalas de trabalho</title>
 	<meta charset="UTF-8">
@@ -156,10 +138,17 @@
 <body style="margin: 0; background: #dfdfdf">
 	<div class="logo">
         <h1>EscalaOnline</h1>
-        <a th:href="@{/coordenador/escalas}"><h3>criar escalas</h3></a>
+     
 		<div class="imagem2">
-			<a th:href="@{/coordenador/escalas/listar-escalas}"><h3>ver escalas</h3></a>
+			<a th:href="@{/coordenador/escala-trabalho/listar-escalas}"><h3>ver escalas</h3></a>
 		</div>
+		<div class="imagem3">
+			<a th:href="@{/coordenador/listar}"><h3>seus dados</h3></a>
+		</div>
+		<div class="imagem1">
+			<a th:href="@{/coordenador/escala-trabalho}"><h3>criar escala</h3></a>
+		</div>
+		
         <div class="logo-do-canto">
             <div class="seu-trabalho-mais-organizado">
               <span>Seu Trabalho Mais <br />Organizado!</span>
@@ -174,9 +163,8 @@
 
 
 	<div class="container">
-		<form action="#" th:action="@{/coordenador/escalas/criar-escala}" th:object="${escala}" method="post">
+		<form action="#" th:action="@{/coordenador/escala/criar-escala}" th:object="${escala}" method="post">
 			
-
 			<div class="alert alert-danger" role="alert" th:if="${!#strings.isEmpty(mensagem)}">
 				<button type="button" class="close" data-dismiss="alert">
 					<span aria-hidden="true">&times;</span>
@@ -224,7 +212,7 @@
 				<label for="hora_saida">Horário de saída</label>
 				<input type="time" th:field="*{hora_saida}" class="input-small"  id="hora_saida" required>
 			</div>
-			<a th:href="@{/coordenador/escalas/criar-escala}"><button type="submit" class="btn btn-primary">Cadastrar</button></a>
+			<a th:href="@{/coordenador/escala-trabalho/criar-escala}"><button type="submit" class="btn btn-primary">Cadastrar</button></a>
 			<a th:href="@{/coordenador}"><button type="button" class="btn btn-primary">Voltar</button></a>
 			</div>
 		</form>

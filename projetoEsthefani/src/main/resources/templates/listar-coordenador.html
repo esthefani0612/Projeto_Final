@@ -3,6 +3,27 @@
 
 <head>
 	<style>
+		.imagem2 h3 {
+			font-size: 14px;
+			position: absolute;
+            top: 38px;
+            left: 122px;
+            color: #053A8A; 
+        }
+        .imagem1 h3{
+			font-size: 14px;
+			position: absolute;
+            top: 38px;
+            left: 17px;
+            color: #053A8A;
+		}
+		 .imagem3 h3{
+			font-size: 14px;
+			position: absolute;
+            top: 37px;
+            left: 220px;
+            color: #053A8A;
+		}
 		.bem-vindo{
 			font-size: 24px;
 			align-self: flex-start;
@@ -18,7 +39,7 @@
 		body{
 			margin: 0;
             padding: 0;
-            font-family: "Glory", sans-serif;
+            font-family: 'Times New Roman', Times, serif;
 		}
 		.container {
             position: relative;
@@ -27,7 +48,7 @@
         .custom-table {
             background-color: white;
             padding: 20px;
-            font-family: "Glory", sans-serif;
+            font-family: 'Times New Roman', Times, serif;
             position: absolute;
             top: 200;
 
@@ -35,7 +56,7 @@
         }
         .letra-E{
               color: var(--white);
-              font-family: var(--font-family-Glory);
+              font-family: 'Times New Roman', Times, serif;
               font-size: 27.3px;
               font-style: normal;
               font-weight: 400;
@@ -78,9 +99,23 @@
 			min-height: 42px;
 			min-width: 139px;
 			text-align: right;
+			font-family: 'Times New Roman', Times, serif;
 		}
-		
-		
+		.logo h3{
+			font-size: 14px;
+			position: absolute;
+            top: 38px;
+            left: 17px;
+            color: #053A8A;
+		}
+		.imagem2 h3 {
+			 color: #053A8A;
+            font-size: 14px;
+            text-align: center;
+            margin-top: 0px; /* Espaçamento superior para separar da imagem */
+            position: absolute;
+            width: 20%; /* Define a largura igual à largura da imagem */
+        }
     </style>
 	<title>Seus dados</title>
 	<meta charset="UTF-8">
@@ -90,6 +125,17 @@
 <body style="margin: 0; background: #dfdfdf">
 	<div class="logo">
         <h1>EscalaOnline</h1>
+
+		<div class="imagem2">
+			<a th:href="@{/coordenador/escala-trabalho/listar-escalas}"><h3>ver escalas</h3></a>
+		</div>
+		<div class="imagem3">
+			<a th:href="@{/coordenador/listar}"><h3>seus dados</h3></a>
+		</div>
+		<div class="imagem1">
+			<a th:href="@{/coordenador/escala-trabalho}"><h3>criar escala</h3></a>
+		</div>
+		
         <div class="logo-do-canto">
             <div class="seu-trabalho-mais-organizado">
               <span>Seu Trabalho Mais <br />Organizado!</span>
@@ -107,6 +153,8 @@
     </div>
     
     <div class="container">
+		<form action="#" th:action="@{/coordenador/listar/{id}(id=${coordenador.id})}" th:object="${coordenador}"
+			method="get">
 		<div class="alert alert-success alert-dismissible" role="alert" th:if="${!#strings.isEmpty(mensagem)}">
 			<button type="button" class="close" data-dismiss="alert">
 				<span aria-hidden="true">&times;</span>
@@ -134,7 +182,7 @@
         </tr>
         <tr th:each="coordenadores : ${coordenador}">
             <td>
-                <a th:href="@{'/atualizar/{id}}" class="btn btn-primary">EDITAR</a>
+                <a th:href="@{/coordenador/atualizar/{id}}" class="btn btn-primary">EDITAR</a>
             </td>
             <td>
 				<a th:href="@{/coordenador}" class="btn btn-primary">Voltar</a>

@@ -32,7 +32,9 @@ public class HoraExtra {
 	@JsonIgnore
 	private List<Perito_HoraExtra> perito;
 	
-	@Max(value=24)
+	private String solicitante;
+	
+	@Max(value=24, message = "Carga horária total excedida!")
 	private Integer hora_total;
 
 	//construtor
@@ -42,9 +44,30 @@ public class HoraExtra {
 
 	
 	//getters e setters
+	
 	public Long getId() {
 		return id;
 	}
+
+	public List<Perito_HoraExtra> getPerito() {
+		return perito;
+	}
+
+
+	public void setPerito(List<Perito_HoraExtra> perito) {
+		this.perito = perito;
+	}
+
+
+	public String getSolicitante() {
+		return solicitante;
+	}
+
+
+	public void setSolicitante(String solicitante) {
+		this.solicitante = solicitante;
+	}
+
 
 	public void setId(Long id) {
 		this.id = id;

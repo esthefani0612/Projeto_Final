@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tela de Login</title>
+    <style>
+        body {
+			margin: 0; 
+			background: #dfdfdf;
+            font-family: 'Times New Roman', serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .login-frame {
+            background-color: rgb(153, 193, 241);
+            border-radius: 20px;
+            padding: 20px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+            width: 300px;
+            text-align: center;
+        }
+
+        .login-frame input[type="text"],
+        .login-frame input[type="password"] {
+            width: 90%;
+            padding: 10px;
+            margin: 10px 0;
+            border: none;
+            border-radius: 10px;
+        }
+
+        .login-frame button {
+            background-color: #2980b9;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+
+		.logo-do-canto {
+            position: absolute;
+            top: 20px; /* Ajuste a distância do topo conforme necessário */
+            right: 30px; /* Ajuste a distância da direita conforme necessário */
+            display: flex;
+            align-items: center;
+            }
+         .letra-E{
+              color: white;
+              font-family: var(--font-family-Glory);
+              font-size: 27.3px;
+              font-style: normal;
+              font-weight: 400;
+        }
+         
+        .frame-E {
+              align-items: flex-start;
+              background-color:#053A8A;
+              border-radius: 32.98px/27.98px;
+              box-shadow: 0px 2.54px 2.54px #00000040;
+              display: flex;
+              height: 30px;
+              justify-content: flex-end;
+              min-width: 15px;
+              padding: 10.0px 23.3px;
+            }
+        
+		.seu-trabalho-mais-organizado{
+			color: #053A8A;
+			letter-spacing: 0;
+			line-height: normal;
+			min-height: 50px;
+			text-align: right;
+			margin-top: 17px;
+		}
+        .login-frame button:hover {
+            background-color: rgb(53, 132, 228);
+        }
+    </style>
+</head>
+<body>
+	<div class="logo-do-canto">
+            <div class="seu-trabalho-mais-organizado">
+              <span>Seu Trabalho Mais <br />Organizado!</span>
+            </div>
+            <div class="frame-E">
+              <div class="letra-E">
+				  <span>E</span>
+			  </div>
+            </div>
+    </div>
+    	
+    <div class="login-frame">
+        <h2>Faça Login</h2>
+        <input type="text" placeholder="Usuário">
+        <input type="password" placeholder="Senha">
+        <label for="entrar-como">Entrar como:</label>
+        <select id="entrar-como">
+            <option value="coordenador">Coordenador</option>
+            <option value="funcionario">Funcionário</option>
+        </select>
+        <button type="submit">Entrar</button>
+    </div>
+</body>
+</html>

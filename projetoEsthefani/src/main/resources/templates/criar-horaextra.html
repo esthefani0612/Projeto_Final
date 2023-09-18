@@ -14,11 +14,12 @@
 			margin-top: 130px;
 			min-height: 35px;
 			white-space: nowrap;
-			font-family: "Glory";
+			font-family: 'Times New Roman', Times, serif;
 		}
 		body{
 			margin: 0;
             padding: 0;
+            font-family: 'Times New Roman', Times, serif;
 		}
 		
 		.cadastro h2{
@@ -40,7 +41,7 @@
 		}
         .letra-E{
               color: var(--white);
-              font-family: var(--font-family-Glory);
+              font-family: 'Times New Roman', Times, serif;
               font-size: 27.3px;
               font-style: normal;
               font-weight: 400;
@@ -86,6 +87,7 @@
 			letter-spacing: 0;
 			line-height: normal;
 			margin-bottom: 1.27px;
+			font-family: 'Times New Roman', Times, serif;
 			min-height: 42px;
 			min-width: 139px;
 			text-align: right;
@@ -138,7 +140,7 @@
 			<h2 class="solicitacao">Solicitar Hora Extra</h2>
 			<div class="form-group">
 			    <label for="dia">Dia</label>
-			    <input class="input-small"  type="text" th:field="*{dia}"  id="dia" required>
+			    <input class="input-small"  type="date" th:field="*{dia}"  id="dia" required>
 			</div>
 			
 			<div class="form-group">
@@ -148,21 +150,26 @@
 			
 			<div class="form-group">
 				<label for="hora_inicio">Horário de início</label>
-				<input type="text" th:field="*{hora_inicio}" class="input-small" id="hora_inicio" required>
+				<input type="time" th:field="*{hora_inicio}" class="input-small" id="hora_inicio" required>
 			</div>
 			
 			<div class="form-group">
 				<label for="hora_termino">Horário de término</label>
-				<input type="text" th:field="*{hora_termino}" class="input-small"  id="hora_termino" required>
+				<input type="time" th:field="*{hora_termino}" class="input-small"  id="hora_termino" required>
 			</div>
 			
 			<div class="form-group">
 				<label for="hora_total">Horas Totais</label>
-				<input type="text" th:field="*{hora_total}" class="input-small"  id="hora_total" required>
+				<input type="number" th:field="*{hora_total}" class="input-small"  id="hora_total" required>
 			</div>
 			
-			<a th:href="@{/peritos/dashbord-perito/solicitacao/criar-hora-extra}"><button type="submit" class="btn btn-primary">Solicitar Horas extra</button></a>
-			<a th:href="@{/peritos/dashbord-perito}" style="margin-left: 80px;"><button type="button" class="btn btn-primary">Voltar</button></a>
+			<div class="form-group">
+				<label for="solicitante">Solicitante</label>
+				<input type="text" th:field="*{solicitante}" class="input-small"  id="solicitante" required>
+			</div>
+			
+			<a th:href="@{/perito/dashbord-perito/solicitacao/criar-hora-extra}"><button type="submit" class="btn btn-primary">Solicitar Horas extra</button></a>
+			<a th:href="@{/perito/dashbord-perito}" style="margin-left: 80px;"><button type="button" class="btn btn-primary">Voltar</button></a>
 			
 		</form>
 		</div>

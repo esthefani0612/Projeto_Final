@@ -17,7 +17,7 @@ import br.ficdev.com.model.EscalaTrabalho;
 import br.ficdev.com.model.Perito;
 import br.ficdev.com.repository.EscalaRepository;
 @Controller
-@RequestMapping("/coordenador/escalas")
+@RequestMapping("/coordenador/escala-trabalho")
 public class EscalaController {
 	
 	@Autowired
@@ -25,8 +25,9 @@ public class EscalaController {
 	
 	@GetMapping
 	public String mostraForm(Model model) {
-		model.addAttribute("escala", new EscalaTrabalho());
-		return "criar-escala";
+	    EscalaTrabalho escala = new EscalaTrabalho(); // Crie um novo objeto "escala"
+	    model.addAttribute("escala", escala); // Adicione-o ao modelo
+	    return "criar-escala";
 	}
 	
 	
@@ -51,14 +52,14 @@ public class EscalaController {
 	
 	
 	@GetMapping("/apagar-escala/{id}")
-	public String deletarMerendeira(@PathVariable("id") Long id) {
+	public String deletarEscala(@PathVariable("id") Long id) {
 		escalaRepo.deleteById(id);
-		return "redirect:/coordenador/escalas";
+		return "redirect:/coordenador/escala-trabalho/listar-escalas";
 	}
 	
 	//Métodos de atualização das escalas de trabalho
 	@GetMapping("/atualizar-escala/{id}")
-	public String updateMerendeira(@PathVariable Long id, Model model) {
+	public String updateEscala(@PathVariable Long id, Model model) {
 		EscalaTrabalho escalaTrabalho = escalaRepo.findById(id).orElse(null);
 		model.addAttribute("escalaTrabalho", escalaTrabalho);
 		return "atualizar-escala";

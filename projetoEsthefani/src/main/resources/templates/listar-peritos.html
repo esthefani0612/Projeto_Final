@@ -14,7 +14,7 @@
 		
         .letra-E{
               color: var(--white);
-              font-family: var(--font-family-Glory);
+              font-family: 'Times New Roman', Times, serif;
               font-size: 27.3px;
               font-style: normal;
               font-weight: 400;
@@ -56,11 +56,35 @@
 			letter-spacing: 0;
 			line-height: normal;
 			margin-bottom: 1.27px;
+			font-family: 'Times New Roman', Times, serif;
 			min-height: 42px;
 			min-width: 139px;
 			text-align: right;
 		}
 		
+        .imagem2 h3 {
+			font-size: 14px;
+			position: absolute;
+            top: 38px;
+            left: 122px;
+            color: #053A8A; 
+        }
+		.imagem3 h3{
+			font-size: 14px;
+			position: absolute;
+            top: 37px;
+            left: 220px;
+            color: #053A8A;
+            font-family: 'Times New Roman', Times, serif;
+		}
+		.imagem1 h3{
+			font-size: 14px;
+			position: absolute;
+            top: 38px;
+            left: 17px;
+            color: #053A8A;
+            font-family: 'Times New Roman', Times, serif;
+		}
 		
     </style>
 	<title>Listagem de Merendeiras</title>
@@ -71,6 +95,17 @@
 <body style="margin: 0; background: #dfdfdf">
 	<div class="logo">
         <h1>EscalaOnline</h1>
+        
+        <div class="imagem2">
+			<a th:href="@{/coordenador/escala-trabalho/listar-escalas}"><h3>ver escalas</h3></a>
+		</div>
+		<div class="imagem3">
+			<a th:href="@{/coordenador/listar}"><h3>seus dados</h3></a>
+		</div>
+		<div class="imagem1">
+			<a th:href="@{/coordenador/escala-trabalho}"><h3>criar escala</h3></a>
+		</div>
+		
         <div class="logo-do-canto">
             <div class="seu-trabalho-mais-organizado">
               <span>Seu Trabalho Mais <br />Organizado!</span>
@@ -110,12 +145,13 @@
 					<td th:text="${perito.telefone}"></td>
 					<td th:text="${perito.email}"></td>
 					<td>
-						<a th:href="@{/peritos/apagar/{id}(id=${perito.cpf})}" class="btn btn-danger"
+						<a th:href="@{/perito/apagar/{id}(id=${perito.cpf})}" class="btn btn-danger"
 							onclick="return confirm('Tem certeza que deseja excluí-lo?')">Excluir</a>
 					</td>
 				</tr>
 			</tbody>
 		</table>	
+		<a th:href="@{/coordenador}"><button type="button" class="btn btn-primary">Voltar</button></a>
 	</div>
 	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>

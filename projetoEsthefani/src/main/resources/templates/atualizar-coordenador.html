@@ -68,6 +68,37 @@
 			min-width: 139px;
 			text-align: right;
 		}
+		.logo h3{
+			font-size: 14px;
+			position: absolute;
+            top: 38px;
+            left: 17px;
+            color: #053A8A;
+		}
+		
+        .imagem3 h3{
+			font-size: 14px;
+			position: absolute;
+            top: 37px;
+            left: 220px;
+            color: #053A8A;
+            font-family: 'Times New Roman', Times, serif;
+		}
+		.imagem2 h3 {
+			font-size: 14px;
+			position: absolute;
+            top: 38px;
+            left: 122px;
+            color: #053A8A; 
+        }
+		.imagem1 h3{
+			font-size: 14px;
+			position: absolute;
+            top: 38px;
+            left: 17px;
+            color: #053A8A;
+            font-family: 'Times New Roman', Times, serif;
+		}
 	</style>
 	<title>Atualize seus dados</title>
 	<meta charset="UTF-8">
@@ -78,6 +109,17 @@
 <body style="margin: 0; background: #dfdfdf">
 	<div class="logo">
         <h1>EscalaOnline</h1>
+        
+		<div class="imagem2">
+			<a th:href="@{/coordenador/escala-trabalho/listar-escalas}"><h3>ver escalas</h3></a>
+		</div>
+		<div class="imagem3">
+			<a th:href="@{/coordenador/listar}"><h3>seus dados</h3></a>
+		</div>
+		<div class="imagem1">
+			<a th:href="@{/coordenador/escala-trabalho}"><h3>criar escala</h3></a>
+		</div>
+		
         <div class="logo-do-canto">
             <div class="seu-trabalho-mais-organizado">
               <span>Seu Trabalho Mais <br />Organizado!</span>

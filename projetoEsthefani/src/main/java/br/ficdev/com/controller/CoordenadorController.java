@@ -11,7 +11,6 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.ModelAndView;
 
 import br.ficdev.com.model.Coordenador;
@@ -28,6 +27,12 @@ public class CoordenadorController {
 	CoordenadorRepository coordenadorRepo;
 	@Autowired
 	PeritoRepository peritoRepo;
+	
+	
+//	@GetMapping
+//	public String mostraForm(Coordenador coordenador) {
+//		return "login";
+//	}
 	
 	@GetMapping
 	public String mostraForm(Perito perito) {
@@ -61,13 +66,20 @@ public class CoordenadorController {
 	}
 	
 	
-	@GetMapping("/listar")
-	public ModelAndView listarCoordenador() {
-		ModelAndView modelAndView = new ModelAndView("listar-coordenador");
-		List<Coordenador> coordena = coordenadorRepo.findAll();
-		modelAndView.addObject("coordenador", coordena);
-		return modelAndView;
+	@GetMapping("/listar/{id}")
+	public ModelAndView listarCoordenador(@PathVariable Long id) {
+	    ModelAndView modelAndView = new ModelAndView("listar-coordenador");
+	    java.util.Optional<Coordenador> coordenador = coordenadorRepo.findById(id);
+	    
+	    if (coordenador.isPresent()) {
+	        modelAndView.addObject("coordenador", coordenador.get());
+	    } else {
+	         modelAndView.setViewName("redirect:/coordenador/listar");
+	    }
+	    
+	    return modelAndView;
 	}
+	
 	
 	
 	@GetMapping("/listar-perito")
@@ -80,19 +92,19 @@ public class CoordenadorController {
 	
 	
 	@GetMapping("/atualizar/{id}")
-	public String updateMerendeira(@PathVariable Long id, Model model) {
+	public String updateCoordenador(@PathVariable Long id, Model model) {
 		Coordenador coordenador = coordenadorRepo.findById(id).orElse(null);
 		model.addAttribute("coordenadores", coordenador);
-		return "atualizar";
+		return "atualizar-coordenador";
 	}
 	@PostMapping("/atualizar/{id}")
 	public ModelAndView atualizarCoordenador(@PathVariable("id") Long id, @ModelAttribute("coordenadores") Coordenador coordenador) {
-	    ModelAndView modelAndView = new ModelAndView("atualizar");
+	    ModelAndView modelAndView = new ModelAndView("atualizar-coordenador");
 	    modelAndView.addObject("coordenadores", coordenador);
 
 	    coordenador.setId(id);
 	    coordenadorRepo.save(coordenador);
-	    modelAndView.addObject("mensagemsalvar", "Merendeira atualizada com sucesso!");
+	    modelAndView.addObject("mensagemsalvar", "Atualizado com sucesso!");
 	    
 	    return modelAndView;}
 	
