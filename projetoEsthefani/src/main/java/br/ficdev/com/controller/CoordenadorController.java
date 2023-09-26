@@ -14,6 +14,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
 import br.ficdev.com.model.Coordenador;
+import br.ficdev.com.model.EscalaTrabalho;
 import br.ficdev.com.model.Perito;
 import br.ficdev.com.repository.CoordenadorRepository;
 import br.ficdev.com.repository.PeritoRepository;
@@ -28,17 +29,20 @@ public class CoordenadorController {
 	@Autowired
 	PeritoRepository peritoRepo;
 	
-	
-//	@GetMapping
-//	public String mostraForm(Coordenador coordenador) {
-//		return "login";
-//	}
+
 	
 	@GetMapping
 	public String mostraForm(Perito perito) {
 		return "dashbord-coordenador";
 	}
 	
+	@GetMapping("/listar-coordenador")
+	public ModelAndView listaCoordenador() {
+		ModelAndView modelAndView = new ModelAndView("listar-coordenador");
+		List<Coordenador> coordenador = coordenadorRepo.findAll();
+		modelAndView.addObject("coordenador", coordenador);
+		return modelAndView;
+	}
 	
 	@PostMapping("/criar")
 	public ModelAndView cadastrarPeritos(@Valid @ModelAttribute("perito") Perito perito, BindingResult result) {
@@ -64,21 +68,7 @@ public class CoordenadorController {
 	
 		return modelAndView;
 	}
-	
-	
-	@GetMapping("/listar/{id}")
-	public ModelAndView listarCoordenador(@PathVariable Long id) {
-	    ModelAndView modelAndView = new ModelAndView("listar-coordenador");
-	    java.util.Optional<Coordenador> coordenador = coordenadorRepo.findById(id);
-	    
-	    if (coordenador.isPresent()) {
-	        modelAndView.addObject("coordenador", coordenador.get());
-	    } else {
-	         modelAndView.setViewName("redirect:/coordenador/listar");
-	    }
-	    
-	    return modelAndView;
-	}
+
 	
 	
 	
@@ -91,18 +81,28 @@ public class CoordenadorController {
 	}
 	
 	
-	@GetMapping("/atualizar/{id}")
-	public String updateCoordenador(@PathVariable Long id, Model model) {
-		Coordenador coordenador = coordenadorRepo.findById(id).orElse(null);
-		model.addAttribute("coordenadores", coordenador);
+	//Atualizar os dados do coordenador
+    @GetMapping("/atualizar/{cpf}")
+	public String updateCoordenador(@PathVariable String cpf, Model model) {
+		Coordenador coordenador = coordenadorRepo.findByCpf(cpf).orElse(null);
+		model.addAttribute("coordenador", coordenador);
 		return "atualizar-coordenador";
 	}
-	@PostMapping("/atualizar/{id}")
-	public ModelAndView atualizarCoordenador(@PathVariable("id") Long id, @ModelAttribute("coordenadores") Coordenador coordenador) {
+	@PostMapping("/atualizar/{cpf}")
+	public ModelAndView atualizarCoordenador(@Valid @PathVariable("cpf") String cpfCoordenador, @ModelAttribute("coordenador") Coordenador coordenador, BindingResult result) {
 	    ModelAndView modelAndView = new ModelAndView("atualizar-coordenador");
-	    modelAndView.addObject("coordenadores", coordenador);
+	    modelAndView.addObject("coordenador", coordenador);
 
-	    coordenador.setId(id);
+	    if (result.hasErrors()) {
+	        if (result.hasFieldErrors("senha")) {
+	            modelAndView.addObject("mensagem", "Este campo não pode estar em branco.");
+	        }else if(result.hasFieldErrors("username")){
+	            modelAndView.addObject("mensagem", "Este campo não pode estar em branco.");
+	        }else if(result.hasFieldErrors("telefone"))
+	            modelAndView.addObject("mensagem", "Número de celular inválido.");
+	        }
+	        
+	    coordenador.setCpf(cpfCoordenador);
 	    coordenadorRepo.save(coordenador);
 	    modelAndView.addObject("mensagemsalvar", "Atualizado com sucesso!");
 	    

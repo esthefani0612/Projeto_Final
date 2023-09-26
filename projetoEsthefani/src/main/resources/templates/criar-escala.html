@@ -56,6 +56,38 @@
             background-color: rgb(180, 216, 216);
             display: block;
 		}
+		.imagem1 h3{
+			font-size: 14px;
+			position: absolute;
+            top: 38px;
+            left: 17px;
+            color: #053A8A;
+            font-family: 'Times New Roman', Times, serif;
+		}
+		.imagem2 h3 {
+			font-size: 14px;
+			position: absolute;
+            top: 38px;
+            margin-left: 117px;
+            color: #053A8A;
+            font-family: 'Times New Roman', Times, serif;
+        }
+        .imagem3 h3{
+			font-size: 14px;
+			position: absolute;
+            top: 38px;
+            margin-left: 215px;
+            color: #053A8A;
+            font-family: 'Times New Roman', Times, serif;
+		}
+		.imagem4 h3{
+			font-size: 14px;
+			position: absolute;
+            top: 30px;
+            margin-left: 300px;
+            color: #053A8A;
+            font-family: 'Times New Roman', Times, serif;
+		}
         .letra-E{
               color: var(--white);
               font-family: serif;
@@ -63,13 +95,7 @@
               font-style: normal;
               font-weight: 400;
         }
-		  .imagem2 h3 {
-			font-size: 14px;
-			position: absolute;
-            top: 38px;
-            left: 122px;
-            color: #053A8A; 
-        }
+		
         /* Estilo para o retângulo branco na parte superior */
         .logo {
             background-color: rgb(255, 255, 255);
@@ -87,13 +113,7 @@
             font-weight: bold;
             color: #053A8A;
         }
-        .imagem3 h3{
-			font-size: 14px;
-			position: absolute;
-            top: 37px;
-            left: 220px;
-            color: #053A8A;
-		}
+       
         .logo-do-canto {
              position: absolute;
             top: 20px; /* Ajuste a distância do topo conforme necessário */
@@ -122,13 +142,7 @@
 			min-width: 139px;
 			text-align: right;
 		}
-		.imagem1 h3{
-			font-size: 14px;
-			position: absolute;
-            top: 38px;
-            left: 17px;
-            color: #053A8A;
-		}
+	
 	</style>
 	<title>Crie escalas de trabalho</title>
 	<meta charset="UTF-8">
@@ -143,10 +157,13 @@
 			<a th:href="@{/coordenador/escala-trabalho/listar-escalas}"><h3>ver escalas</h3></a>
 		</div>
 		<div class="imagem3">
-			<a th:href="@{/coordenador/listar}"><h3>seus dados</h3></a>
+			<a th:href="@{/coordenador/listar-coordenador}"><h3>seus dados</h3></a>
 		</div>
 		<div class="imagem1">
 			<a th:href="@{/coordenador/escala-trabalho}"><h3>criar escala</h3></a>
+		</div>
+		<div class="imagem4">
+			<a th:href="@{/dashbord-perito/solicitacao/listar-horaextra}"><h3>solicitação<br>hora extra</h3></a>
 		</div>
 		
         <div class="logo-do-canto">

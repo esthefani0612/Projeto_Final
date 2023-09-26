@@ -11,7 +11,38 @@
 		.container {
             position: relative;
         }
-		
+		.imagem1 h3{
+			font-size: 14px;
+			position: absolute;
+            top: 38px;
+            left: 17px;
+            color: #053A8A;
+            font-family: 'Times New Roman', Times, serif;
+		}
+		.imagem2 h3 {
+			font-size: 14px;
+			position: absolute;
+            top: 38px;
+            margin-left: 117px;
+            color: #053A8A;
+            font-family: 'Times New Roman', Times, serif;
+        }
+        .imagem3 h3{
+			font-size: 14px;
+			position: absolute;
+            top: 38px;
+            margin-left: 215px;
+            color: #053A8A;
+            font-family: 'Times New Roman', Times, serif;
+		}
+		.imagem4 h3{
+			font-size: 14px;
+			position: absolute;
+            top: 30px;
+            margin-left: 300px;
+            color: #053A8A;
+            font-family: 'Times New Roman', Times, serif;
+		}
         .letra-E{
               color: var(--white);
               font-family: 'Times New Roman', Times, serif;
@@ -61,31 +92,7 @@
 			min-width: 139px;
 			text-align: right;
 		}
-		
-        .imagem2 h3 {
-			font-size: 14px;
-			position: absolute;
-            top: 38px;
-            left: 122px;
-            color: #053A8A; 
-        }
-		.imagem3 h3{
-			font-size: 14px;
-			position: absolute;
-            top: 37px;
-            left: 220px;
-            color: #053A8A;
-            font-family: 'Times New Roman', Times, serif;
-		}
-		.imagem1 h3{
-			font-size: 14px;
-			position: absolute;
-            top: 38px;
-            left: 17px;
-            color: #053A8A;
-            font-family: 'Times New Roman', Times, serif;
-		}
-		
+	
     </style>
 	<title>Listagem de Merendeiras</title>
 	<meta charset="UTF-8">
@@ -96,14 +103,17 @@
 	<div class="logo">
         <h1>EscalaOnline</h1>
         
-        <div class="imagem2">
+      	<div class="imagem2">
 			<a th:href="@{/coordenador/escala-trabalho/listar-escalas}"><h3>ver escalas</h3></a>
 		</div>
 		<div class="imagem3">
-			<a th:href="@{/coordenador/listar}"><h3>seus dados</h3></a>
+			<a th:href="@{/coordenador/listar-coordenador}"><h3>seus dados</h3></a>
 		</div>
 		<div class="imagem1">
 			<a th:href="@{/coordenador/escala-trabalho}"><h3>criar escala</h3></a>
+		</div>
+		<div class="imagem4">
+			<a th:href="@{/dashbord-perito/solicitacao/listar-horaextra}"><h3>solicitação<br>hora extra</h3></a>
 		</div>
 		
         <div class="logo-do-canto">

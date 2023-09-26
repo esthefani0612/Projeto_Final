@@ -94,17 +94,16 @@
 			  </div>
             </div>
     </div>
-    	
+    <form class="user" action="/logar"	method="post">
     <div class="login-frame">
         <h2>Faça Login</h2>
-        <input type="text" placeholder="Usuário">
-        <input type="password" placeholder="Senha">
-        <label for="entrar-como">Entrar como:</label>
-        <select id="entrar-como">
-            <option value="coordenador">Coordenador</option>
-            <option value="funcionario">Funcionário</option>
-        </select>
+        <input type="text" id="username" name="username" placeholder="Usuário">
+        <input type="password" id="senha" name="senha" placeholder="Senha">
+       
+        <div th:text="${erro}" class="alert alert-danger" role="alert"></div>
+        <br>
         <button type="submit">Entrar</button>
     </div>
+    </form>
 </body>
 </html>

@@ -166,12 +166,12 @@
 				</tr>		
 			</thead>
 			<tbody>
-				<tr th:each="horasExtras : ${horasExtras}">
-					<td th:text="${horasExtras.dia}"></td>
-					<td th:text="${horasExtras.turno}"></td>
-					<td th:text="${horasExtras.hora_inicio}"></td>
-					<td th:text="${horasExtras.hora_termino}"></td>
-					<td th:text="${horasExtras.hora_total}"></td>
+				<tr th:each="horasExtra : ${hora}">
+					<td th:text="${horasExtra.dia}"></td>
+					<td th:text="${horasExtra.turno}"></td>
+					<td th:text="${horasExtra.hora_inicio}"></td>
+					<td th:text="${horasExtra.hora_termino}"></td>
+					<td th:text="${horasExtra.hora_total}"></td>
 					<td>
 				<!--<a th:href="@{/apagar/{id}(id=${perito.id})}" class="btn btn-danger"
 					onclick="return confirm('Tem certeza que deseja excluir?')">Excluir</a>

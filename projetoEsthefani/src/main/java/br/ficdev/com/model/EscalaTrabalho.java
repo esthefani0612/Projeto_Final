@@ -25,10 +25,7 @@ public class EscalaTrabalho {
 	private String hora_entrada;
 	private String hora_saida;
 	private String turno;
-	
-	@OneToMany (mappedBy = "escala_id", cascade = CascadeType.ALL)
-	@JsonIgnore
-	List<Perito> atribuicao_perito;
+
 
 	//construtor vazio
 	public EscalaTrabalho() {
@@ -84,13 +81,6 @@ public class EscalaTrabalho {
 		this.turno = turno;
 	}
 
-	public List<Perito> getAtribuicao_perito() {
-		return atribuicao_perito;
-	}
-
-	public void setAtribuicao_perito(List<Perito> atribuicao_perito) {
-		this.atribuicao_perito = atribuicao_perito;
-	}
 	
 	
 }

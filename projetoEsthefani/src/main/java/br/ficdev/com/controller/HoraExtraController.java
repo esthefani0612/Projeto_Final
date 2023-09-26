@@ -63,12 +63,6 @@ public class HoraExtraController {
 	}
 	
 	
-//	@GetMapping("listar-horaExtra")
-//	public ModelAndView listarHorasExtra() {
-//		ModelAndView modelAndView = new ModelAndView("listar-horas");
-//		List<HoraExtra> horas = horaExtraRepo.findAll();
-//		modelAndView.addObject("horasExtra", horas);
-//		return modelAndView;
-//	}
+
 	
 }

@@ -49,9 +49,7 @@ public class Perito {
 	@JsonIgnore
 	private List<Perito_HoraExtra> horaextra;
 
-	@ManyToOne
-	@JoinColumn
-	private EscalaTrabalho escala_id;
+
 
 	
 	//construtor vazio

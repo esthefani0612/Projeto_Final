@@ -23,7 +23,14 @@
               font-style: normal;
               font-weight: 400;
         }
-        
+        .imagem4 h3{
+			font-size: 14px;
+			position: absolute;
+            top: 30px;
+            margin-left: 300px;
+            color: #053A8A;
+            font-family: 'Times New Roman', Times, serif;
+		}
         .inputs{
 			width: 350px;
     		height: 74px;
@@ -76,26 +83,27 @@
             color: #053A8A;
 		}
 		
-        .imagem3 h3{
-			font-size: 14px;
-			position: absolute;
-            top: 37px;
-            left: 220px;
-            color: #053A8A;
-            font-family: 'Times New Roman', Times, serif;
-		}
-		.imagem2 h3 {
+        .imagem2 h3 {
 			font-size: 14px;
 			position: absolute;
             top: 38px;
-            left: 122px;
-            color: #053A8A; 
+            margin-left: 117px;
+            color: #053A8A;
+            font-family: 'Times New Roman', Times, serif;
         }
+        .imagem3 h3{
+			font-size: 14px;
+			position: absolute;
+            top: 38px;
+            margin-left: 215px;
+            color: #053A8A;
+            font-family: 'Times New Roman', Times, serif;
+		}
 		.imagem1 h3{
 			font-size: 14px;
 			position: absolute;
             top: 38px;
-            left: 17px;
+            margin-left: 17px;
             color: #053A8A;
             font-family: 'Times New Roman', Times, serif;
 		}
@@ -114,10 +122,13 @@
 			<a th:href="@{/coordenador/escala-trabalho/listar-escalas}"><h3>ver escalas</h3></a>
 		</div>
 		<div class="imagem3">
-			<a th:href="@{/coordenador/listar}"><h3>seus dados</h3></a>
+			<a th:href="@{/coordenador/listar-coordenador}"><h3>seus dados</h3></a>
 		</div>
 		<div class="imagem1">
 			<a th:href="@{/coordenador/escala-trabalho}"><h3>criar escala</h3></a>
+		</div>
+		<div class="imagem4">
+			<a th:href="@{/dashbord-perito/solicitacao/listar-horaextra}"><h3>solicitação<br>hora extra</h3></a>
 		</div>
 		
         <div class="logo-do-canto">
@@ -134,7 +145,7 @@
     
 	<div class="container">
 		<strong><h2>Preencha os campos!</h2></strong>			<!--sempre verificar esta parte abaixo, pois os nomes coordenadores e coordenador pode dar erro-->
-		<form action="#" th:action="@{/coordenador/atualizar/{id}(id=${coordenadores.id})}" th:object="${coordenador}"
+		<form action="#" th:action="@{/coordenador/atualizar/{cpf}(cpf=${coordenador.cpf})}" th:object="${coordenador}"
 			method="post">
 
 			<div class="alert alert-danger" role="alert" th:if="${not #strings.isEmpty(mensagem)}">
@@ -151,7 +162,7 @@
 				<span th:text="${mensagemsalvar}"></span>
 			</div>
 
-			<input type="hidden" name="id" th:value="${coordenador.id}">
+			<input type="hidden" name="cpf" th:value="${coordenador.cpf}">
 			<div class="form-group  inputs">
 				<label for="nome">Nome</label>
 				<input type="text" th:field="*{nome}" th:value="${coordenador.nome}"
@@ -172,8 +183,14 @@
 				<label for="username">Username:</label>
 				<input type="text" th:field="*{username}" th:value="${coordenador.username}" class="form-control" id="username">
 			</div>
+			
+			<div class="form-group  inputs">
+				<label for="senha">Senha:</label>
+				<input type="password" th:field="*{senha}" th:value="${coordenador.senha}" class="form-control" id="username">
+			</div>
+			
 			<button type="submit" class="btn btn-primary">Atualizar</button>
-			<a th:href="@{/coordenador/listar}"><button type="button" class="btn btn-primary" style="margin-left: 189px;">Voltar</button></a>
+			<a th:href="@{/coordenador/listar-coordenador}"><button type="button" class="btn btn-primary" style="margin-left: 189px;">Voltar</button></a>
 
 
 		</form>

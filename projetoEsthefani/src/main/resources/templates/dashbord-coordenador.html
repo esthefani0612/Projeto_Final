@@ -88,19 +88,18 @@
             font-family: 'Times New Roman', Times, serif;
 		}
 		.imagem2 h3 {
-			color: #053A8A;
-            font-size: 14px;
+			font-size: 14px;
+			position: absolute;
+            top: 38px;
+            margin-left: 117px;
+            color: #053A8A;
             font-family: 'Times New Roman', Times, serif;
-            text-align: center;
-            margin-top: 0px; /* Espaçamento superior para separar da imagem */
-            position: absolute;
-            width: 20%; /* Define a largura igual à largura da imagem */
         }
         .imagem3 h3{
 			font-size: 14px;
 			position: absolute;
             top: 38px;
-            left: 220px;
+            margin-left: 215px;
             color: #053A8A;
             font-family: 'Times New Roman', Times, serif;
 		}
@@ -108,7 +107,7 @@
 			font-size: 14px;
 			position: absolute;
             top: 30px;
-            left: 300px;
+            margin-left: 300px;
             color: #053A8A;
             font-family: 'Times New Roman', Times, serif;
 		}
@@ -176,7 +175,7 @@
 			<a th:href="@{/coordenador/escala-trabalho/listar-escalas}"><h3>ver escalas</h3></a>
 		</div>
 		<div class="imagem3">
-			<a th:href="@{/coordenador/listar}"><h3>seus dados</h3></a>
+			<a th:href="@{/coordenador/listar-coordenador}"><h3>seus dados</h3></a>
 		</div>
 		<div class="imagem1">
 			<a th:href="@{/coordenador/escala-trabalho}"><h3>criar escala</h3></a>

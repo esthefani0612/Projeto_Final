@@ -30,9 +30,6 @@ public class PeritoController {
     @Autowired
     PeritoRepository peritoRepo;
 
-    @GetMapping
-    public String mostrarLogin(Perito perito){
-        return "login";    }
 
     // Listar os dados do perito 
     @GetMapping("/dashbord-perito")
